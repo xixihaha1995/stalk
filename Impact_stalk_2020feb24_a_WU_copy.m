@@ -24,10 +24,15 @@ outDir = 'C:\Users\lab-admin\Desktop\Lichen_Wu\movies_circled\';
 filename_out = strcat(outDir,'circled',ext_out);
 
 outDir_prof = 'C:\Users\lab-admin\Desktop\Lichen_Wu\movies_profiled\';
-filename_out_prof = strcat(outDir,'JetVel',ext_out);
+filename_out_prof = strcat(outDir_prof,'JetVel',ext_out);
 
 growing = 0;
 save_grow = 0;
+impact_left_index=1;
+impact_right_index=1;
+left_saved=0;
+right_saved=0;
+
 
 for movie_itr = 6: 8
     movie_folder_name = movie_dir(movie_itr).name;
@@ -50,7 +55,7 @@ for movie_itr = 6: 8
     y1 = Impact_location-500;
 
     figure(1);
-    set(gcf,'WindowState','maximized')
+    set(gcf,'WindowState','maximized');
 
     plot(smooth(double((ref_a(:, Impact_location-500)))),'r');
     hold on
@@ -69,6 +74,8 @@ for movie_itr = 6: 8
     skipped = 0;
     increaseHight = 0;
     i=0;
+    impact_saved = 0;
+    getAssumingImpact=0;
    
     
     fid = fopen(level_out,'a');
@@ -95,17 +102,22 @@ for movie_itr = 6: 8
 %         save impact index
 %         save impact index
 
-        impact_saved = 0;
-        if impact_saved ==0;
-            impact_index=size(img_dir)-100
-            if ref_index == ii || contains(filename,'.bmp') == 0 ||...
-                    contains(filename,'.txt')
-                continue
-            end
-            
+
+        if impact_saved ==0 && getAssumingImpact ==0;
+            getAssumingImpact =1;
+            [sizImg,tmpUseless]=size(img_dir);
+            impact_index=sizImg-100;
+            filenameImpact=img_dir(impact_index).name;
+        end
+        if impact_saved==0 && impact_index == ii || contains(filenameImpact,'.bmp') == 0 ||...
+                contains(filenameImpact,'.txt')
+            impact_index = impact_index-1;
+            continue
+        end
+        if impact_saved==0
             figure();
-            imshow(img_dir(impact_index).name)
-            set(gcf,'WindowState','maximized')
+            imshow(img_dir(impact_index).name);
+            set(gcf,'WindowState','maximized');
             [impact_index_xx,impact_index_yy] = ginput(1);
             impact_saved = 1;
         end
@@ -284,18 +296,32 @@ for movie_itr = 6: 8
             plotyy = profile_y+x1;
             xxyy=vertcat(plotxx,plotyy);
             
-            for impact_left_index=1:size(plotxx)
-                if plotxx(impact_left_index)>impact_index_xx-60
-                    break
-                end
+            while plotxx(impact_left_index)<impact_index_xx-60 && left_saved==0;
+                impact_left_index = impact_left_index +1;
             end
+            left_saved=1;
+            while plotxx(impact_right_index)<impact_index_xx+60 && right_saved==0;
+                impact_right_index = impact_right_index +1;
+            end
+            right_saved=1;
             
-            for impact_right_index=size(plotxx):-1:1
-                if plotxx(impact_right_index)<impact_index_xx+60
-                    break
-                end
-            end
-            impactyy=plotyy(impact_left_index,impact_right_index)
+%             for itr=1:size(plotxx)
+%                 if plotxx(itr)>impact_index_xx-60
+%                     impact_left_index=itr;
+%                     break
+%                 end
+%                 continue
+%             end
+%             
+%             for itr=size(plotxx):-1:1
+%                 if plotxx(itr)<impact_index_xx+60
+%                     impact_right_index=itr;
+%                     break
+%                 end
+%                 continue
+%             end
+            impactyy=plotyy(impact_left_index:impact_right_index);
+            impactxx=plotxx(impact_left_index:impact_right_index);
             
             
 
@@ -307,7 +333,7 @@ for movie_itr = 6: 8
             y = 1000 - profile_y;
             
             [heightYY,minH_index] = min(impactyy);
-            heightXX = x(minH_index);
+            heightXX = impactxx(minH_index);
             fprintf('img%s impXX=%d  impYY=%d\n',img_dir(ii).name,heightXX,heightYY);
             
             if i == 0
@@ -319,12 +345,12 @@ for movie_itr = 6: 8
                 heightYY_old = heightYY;
                 %         disp(heightYY_old)
             end
-            if increaseHight>4 && growing == 0 && abs(mean(impactyy)-level)<5
+            if increaseHight>4 && growing == 0 && abs(mean(impactyy)-level)<20
                 jet_growing_index=ii;
                 growing =1;
                 disp(jet_growing_index)
             
-            if increaseHight>4 && save_grow < 5
+            if increaseHight>4 && save_grow < 6
                 if increaseHight>20
                     ii = ii + 1;
 %                     prefix = strcat(prefix_1,prefix_14,prefix_15,prefix_10,prefix_11,prefix_6,...
