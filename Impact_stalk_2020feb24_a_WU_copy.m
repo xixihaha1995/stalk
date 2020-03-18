@@ -20,7 +20,10 @@ extlevel_out = '.txt';
 levelDir = 'C:\Users\lab-admin\Desktop\Lichen_Wu\movies_leveled\';
 level_out = strcat(levelDir,'level',extlevel_out);
 
-for movie_itr = 3: size(movie_dir)
+outDir = 'C:\Users\lab-admin\Desktop\Lichen_Wu\movies_circled\';
+filename_out = strcat(outDir,'circled',ext_out);
+
+for movie_itr = 6: 8
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
     img_dir=dir(strcat(movie_dir(movie_itr).folder,'\',movie_dir(movie_itr).name));
@@ -55,6 +58,8 @@ for movie_itr = 3: size(movie_dir)
     
     level = (x1 + x2)/2; 
     numCircledFailuer = 0;
+    totalNumber = 0;
+    skipped = 0;
    
     
     fid = fopen(level_out,'a');
@@ -76,22 +81,28 @@ for movie_itr = 3: size(movie_dir)
 
 
     
-    for img_itr = size(img_dir):-1:3
-        ii = img_itr;
+    for ii = size(img_dir):-1:3
         filename = strcat(img_dir(ii).name);
 
-%         skip  non-.bmp file
-        if contains(filename,'.bmp') == 0
+%         skip  non-.bmp file, skip txt file(including .bmp ext)
+        if ref_index == ii || contains(filename,'.bmp') == 0 ||...
+                contains(filename,'.txt')
+            skipped = skipped +1;
             continue
         end
-%         skip txt file(including .bmp ext)
-        if contains(filename,'.txt')
-            continue
-        end
+    
+% ref should be 1 img ahead of first
+%         ii = ii - 1;
+%         filename = strcat(img_dir(ii).name);
+%         
+%         %         skip  non-.bmp file, skip txt file(including .bmp ext)
+%         if contains(filename,'.bmp') == 0 || contains(filename,'.txt')
+%             continue
+%         end
         
-        
+
             
-        a = imread(filename, 'bmp');
+        a = imread(filename);
         
 % subtract the background
         a0 =ref_a-a; 
@@ -113,14 +124,18 @@ for movie_itr = 3: size(movie_dir)
         [K_M, K_I]=sort(boundary_size, 'descend');
         
 %         find circle
-        max(boundary(:,1)) = level + 1;
+%         find circle
 
-        while  max(boundary(:,1))> level
+        boundary = B{K_I(1)};
+
+        if  max(boundary(:,1))< level
+            totalNumber = totalNumber + 1;
             
                 boundary = B{K_I(1)};
                 figure(2);
                 imshow(a);
                 hold on;
+
                 plot(boundary(:,2), boundary(:,1),'r');
                 hold off;
 
@@ -135,8 +150,57 @@ for movie_itr = 3: size(movie_dir)
                 
                 [centers,radii] = imfindcircles(BW,[28 50],'ObjectPolarity','bright');
                 siz=size(radii);
+                
+                
+                if(siz(1) ~= 1)
+                    numCircledFailuer = numCircledFailuer + 1;
+
+                    stats = regionprops('table',BW,'Centroid',...
+                    'MajorAxisLength','MinorAxisLength','Orientation');
+                    stats = sortrows(stats,2,'descend');
+                    centers = stats.Centroid;
+                    %         centers = centers(1,:);
+                    majorAxisLength = stats.MajorAxisLength(1);
+                    minorAxisLength =stats.MinorAxisLength(1);
+                    %         if majorAxisLength<30
+                    %             majorAxisLength=strcat(num2str(majorAxisLength),'invalidEcllipse');
+                    %         end
+                    orientation = stats.Orientation(1);
+
+                    fid = fopen(filename_out,'a');
+                    
+                    fprintf(fid,'%s',[img_dir(ii).name]);
+                    fprintf(fid, '\t  %d \t  %d \t  %d \t  %d \t  %d \t  %d \t  %8.2f \t %8.2f \t %s\t %8.2f \t %d\n',...
+                        [c(1);c(2);c(3);c(4);c(5);c(6); cenXX; cenYY; majorAxisLength;...
+                        minorAxisLength; orientation]); 
+                    fclose(fid);
+
+                    continue
+                end
+                
+                if (radii<30)
+                    msg='radius of droplet are too small';
+                    error(msg)
+                elseif (radii>115)
+                    msg='radius of droplet are too big';
+                    error(msg)
+                end
+
+                fid = fopen(filename_out,'a');
+                
+                fprintf(fid,'%s',[img_dir(ii).name]);
+                fprintf(fid, '\t %d \t  %d \t  %d \t  %d \t  %d \t  %d \t %8.2f \t %8.2f \t %8.2f\n',...
+                    [c(1);c(2);c(3);c(4);c(5);c(6);cenXX; cenYY;radii]); %relative to flat surface
+                fclose(fid); 
+                continue
         end
-        
+        if max(boundary(:,1))> level && ii == ref_index - totalNumber -skipped + 1
+            
+            fprintf('Total %d images have been processed, %d have been circled, %d have been centroided.\n', ...
+                totalNumber, totalNumber - numCircledFailuer, numCircledFailuer);
+            disp('------');
+            diary 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\circle_droplet\circleDiaryFile'
+        end
             
         
       
@@ -149,46 +213,49 @@ for movie_itr = 3: size(movie_dir)
 %         end
         
         
+        if max(boundary(:,1))> level && ii < ref_index - totalNumber -skipped + 1 -40
+            
+            figure(3); imshow(a1);
+            hold on
+            for k1=1:kk
+                boundary = B{K_I(k1)};
+                plot(boundary(:,2), boundary(:,1),'r');
+                text(boundary(int16(K_M(k1)/2), 2), boundary(int16(K_M(k1)/2),1), num2str(k1),'Color','green','FontSize',24);
+            end 
+            plt=plot([y1 y2], [x1 x2], 'm', 'LineWidth', 2);
 
-        figure(3); imshow(a1);
-        hold on
-        for k1=1:kk
-            boundary = B{K_I(k1)};
-            plot(boundary(:,2), boundary(:,1),'r');
-            text(boundary(int16(K_M(k1)/2), 2), boundary(int16(K_M(k1)/2),1), num2str(k1),'Color','green','FontSize',24);
-        end 
-        plt=plot([y1 y2], [x1 x2], 'm', 'LineWidth', 2);
+            hold off
 
-        hold off
 
-       
-        profl = B{K_I(1)};
-        [min_x, I_min]=min(profl(:,2)); %In the horizontal direction
-        [max_x, I_max]=max(profl(:,2));
-        x_temp = profl(I_min:I_max, 2)';
-        y_temp = profl(I_min:I_max, 1)';
+            profl = B{K_I(1)};
+            [min_x, I_min]=min(profl(:,2)); %In the horizontal direction
+            [max_x, I_max]=max(profl(:,2));
+            x_temp = profl(I_min:I_max, 2)';
+            y_temp = profl(I_min:I_max, 1)';
 
-        figure(4); imshow(a);
-        hold on
-        plot(x_temp, y_temp, 'r');
-        %hold off
+            figure(4); imshow(a);
+            hold on
+            plot(x_temp, y_temp, 'r');
+            %hold off
 
-        % alpha = 0; %The flat surface has aero angle in image 
-        profile_x = (y_temp-x1).*sin(alpha)+(x_temp-y1).*cos(alpha);
-        profile_y = (y_temp-x1).*cos(alpha)-(x_temp-y1).*sin(alpha);
+            % alpha = 0; %The flat surface has aero angle in image 
+            profile_x = (y_temp-x1).*sin(alpha)+(x_temp-y1).*cos(alpha);
+            profile_y = (y_temp-x1).*cos(alpha)-(x_temp-y1).*sin(alpha);
 
-        plot(profile_x+y1, profile_y+x1, 'y')
-        hold off
+            plot(profile_x+y1, profile_y+x1, 'y')
+            hold off
 
-        filename_out = strcat(filename,ext_out);
-        fid = fopen(filename_out,'w');
-        %relative to flat surface
-        fprintf(fid, '%8.2f \t %8.2f\n',[profile_x; -profile_y]); 
-        fclose(fid);
-        clear profile_x profile_y
-        cd ..
+            filename_out = strcat(filename,ext_out);
+            fid = fopen(filename_out,'w');
+            %relative to flat surface
+            fprintf(fid, '%8.2f \t %8.2f\n',[profile_x; -profile_y]); 
+            fclose(fid);
+            clear profile_x profile_y  
+        end
         
+        continue
     end
+    cd ..
     
 end
 
