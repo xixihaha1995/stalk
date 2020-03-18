@@ -1,0 +1,1917 @@
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           10           44       59.154
+
+currentNdl: 22
+currentHight:  0
+currentRun:  3
+reference image (ref_index =?):  -796
+Please enter the number of first image of stalk (FirstIm =?):  -741
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt0_r3\20200108_ndl22_ht0_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+x1= 1.068510e+03, x2=1.061137e+03Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           10           51        4.981
+
+currentNdl: 22
+currentHight:  1
+currentRun:  1
+reference image (ref_index =?):  -625
+Please enter the number of first image of stalk (FirstIm =?):  -569
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt1_r1\20200108_ndl22_ht1_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+x1=
+       1066.1
+
+x2=
+       1056.2
+
+    75
+
+have been profiled.
+------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           10           54        8.581
+
+currentNdl: 22
+currentHight:  1
+currentRun:  2
+reference image (ref_index =?):  -711
+Please enter the number of first image of stalk (FirstIm =?):  -657
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt1_r2\20200108_ndl22_ht1_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+    74
+
+have been profiled.
+------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11            1       27.046
+
+currentNdl: 22
+currentHight:  1
+currentRun:  3
+reference image (ref_index =?):  497
+Please enter the number of first image of stalk (FirstIm =?):  551
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt1_r3\20200108_ndl22_ht1_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+    77
+
+have been profiled.
+------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11            3       43.919
+
+currentNdl: 22
+currentHight:  2
+currentRun:  1
+reference image (ref_index =?):  -1172
+Please enter the number of first image of stalk (FirstIm =?):  -1117
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt2_r1\20200108_ndl22_ht2_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1064.8
+
+
+x2 =
+
+       1056.2
+
+    75
+
+have been profiled.
+------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11            5       45.295
+
+currentNdl: 22
+currentHight:  2
+currentRun:  2
+reference image (ref_index =?):  -505
+Please enter the number of first image of stalk (FirstIm =?):  -452
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt2_r2\20200108_ndl22_ht2_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1063.6
+
+
+x2 =
+
+       1056.2
+
+    73
+
+have been profiled.
+--------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11           21       27.456
+
+currentNdl: 22
+currentHight:  2
+currentRun:  3
+reference image (ref_index =?):  -1112
+Please enter the number of first image of stalk (FirstIm =?):  -1027
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt2_r3\20200108_ndl22_ht2_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ginput', 'C:\Program Files\MATLAB\R2019b\toolbox\matlab\uitools\ginput.m', 84)" style="font-weight:bold">ginput</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2019b\toolbox\matlab\uitools\ginput.m',84,0)">line 84</a>)
+Interrupted by figure deletion
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Impact_stalk_2020feb24_a_WU_copy', 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\Impact_stalk_2020feb24_a_WU_copy.m', 86)" style="font-weight:bold">Impact_stalk_2020feb24_a_WU_copy</a> (<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\Impact_stalk_2020feb24_a_WU_copy.m',86,0)">line 86</a>)
+[x1,y1g] = ginput(1);
+} 
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11           22       42.285
+
+currentNdl: 22
+currentHight:  2
+currentRun:  3
+reference image (ref_index =?):  -1112
+Please enter the number of first image of stalk (FirstIm =?):  -1057
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt2_r3\20200108_ndl22_ht2_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1064.8
+
+
+x2 =
+
+       1052.5
+
+    87
+
+have been profiled.
+--------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11           24       41.669
+
+currentNdl: 22
+currentHight:  3
+currentRun:  1
+reference image (ref_index =?):  -547
+Please enter the number of first image of stalk (FirstIm =?):  -493
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt3_r1\20200108_ndl22_ht3_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1066.1
+
+
+x2 =
+
+       1052.5
+
+    65
+
+have been profiled.
+--------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11           28       47.072
+
+currentNdl: 22
+currentHight:  3
+currentRun:  2
+reference image (ref_index =?):  -79
+Please enter the number of first image of stalk (FirstIm =?):  -19
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt3_r2\20200108_ndl22_ht3_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1063.6
+
+
+x2 =
+
+       1053.8
+
+    92
+
+have been profiled.
+--------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11           30       48.292
+
+currentNdl: 22
+currentHight:  3
+currentRun:  3
+reference image (ref_index =?):  -352
+Please enter the number of first image of stalk (FirstIm =?):  -291
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt3_r3\20200108_ndl22_ht3_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1068.5
+
+
+x2 =
+
+         1055
+
+    88
+
+have been profiled.
+--------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11           32       37.503
+
+currentNdl: 22
+currentHight:  3
+currentRun:  3
+reference image (ref_index =?):  -352
+Please enter the number of first image of stalk (FirstIm =?):  -298
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt3_r3\20200108_ndl22_ht3_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1066.1
+
+
+x2 =
+
+       1053.8
+
+    95
+
+have been profiled.
+--------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11           34       40.739
+
+currentNdl: 22
+currentHight:  4
+currentRun:  1
+reference image (ref_index =?):  -771
+Please enter the number of first image of stalk (FirstIm =?):  -724
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt4_r1\20200108_ndl22_ht4_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1066.1
+
+
+x2 =
+
+       1053.8
+
+    72
+
+have been profiled.
+--------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11           37       13.211
+
+currentNdl: 22
+currentHight:  4
+currentRun:  2
+reference image (ref_index =?):  -974
+Please enter the number of first image of stalk (FirstIm =?):  -919
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt4_r2\20200108_ndl22_ht4_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1066.1
+
+
+x2 =
+
+       1052.5
+
+    78
+
+have been profiled.
+--------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11           38       42.212
+
+currentNdl: 22
+currentHight:  4
+currentRun:  3
+reference image (ref_index =?):  -889
+Please enter the number of first image of stalk (FirstIm =?):  -838
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt4_r3\20200108_ndl22_ht4_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1066.1
+
+
+x2 =
+
+       1056.2
+
+    80
+
+have been profiled.
+--------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11           40        9.718
+
+currentNdl: 22
+currentHight:  5
+currentRun:  1
+reference image (ref_index =?):  -1403
+Please enter the number of first image of stalk (FirstIm =?):  -1362
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt5_r1\20200108_ndl22_ht5_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1068.5
+
+
+x2 =
+
+       1058.7
+
+    38
+
+have been profiled.
+--------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11           43        8.583
+
+currentNdl: 22
+currentHight:  5
+currentRun:  2
+reference image (ref_index =?):  -445
+Please enter the number of first image of stalk (FirstIm =?):  -405
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt5_r2\20200108_ndl22_ht5_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+         1071
+
+
+x2 =
+
+       1057.5
+
+    69
+
+have been profiled.
+--------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11           45       12.352
+
+currentNdl: 22
+currentHight:  5
+currentRun:  3
+reference image (ref_index =?):  -497
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt5_r3\20200108_ndl22_ht5_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1068.5
+
+
+x2 =
+
+         1055
+
+    75
+
+have been profiled.
+--------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11           47        9.187
+
+currentNdl: 22
+currentHight:  6
+currentRun:  1
+reference image (ref_index =?):  -896
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt6_r1\20200108_ndl22_ht6_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1066.1
+
+
+x2 =
+
+       1048.8
+
+    43
+
+have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11           48       34.928
+
+currentNdl: 22
+currentHight:  6
+currentRun:  2
+reference image (ref_index =?):  -1009
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt6_r2\20200108_ndl22_ht6_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1068.5
+
+
+x2 =
+
+       1051.3
+
+    43
+
+have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11           49       42.769
+
+currentNdl: 22
+currentHight:  6
+currentRun:  3
+reference image (ref_index =?):  -1412
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt6_r3\20200108_ndl22_ht6_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1063.6
+
+
+x2 =
+
+         1055
+
+    51
+
+have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           11           54       57.254
+
+currentNdl: 22
+currentHight:  7
+currentRun:  1
+reference image (ref_index =?):  1027
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt7_r1\20200108_ndl22_ht7_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1068.5
+
+
+x2 =
+
+         1055
+
+    41
+
+have been profiled.
+----------------------------------
+uiopen('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\circle_droplet\circle_Wu_20200302.m',1)
+circle_Wu_20200302
+         2020            3            5           12            7       22.195
+
+currentNdl: 14
+currentHight:  1
+currentRun:  .
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('circle_Wu_20200302', 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\circle_droplet\circle_Wu_20200302.m', 14)" style="font-weight:bold">circle_Wu_20200302</a> (<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\circle_droplet\circle_Wu_20200302.m',14,0)">line 14</a>)
+Error: Invalid use of operator.
+} 
+circle_Wu_20200302
+         2020            3            5           12            7       28.436
+
+currentNdl: 14
+currentHight:  1
+currentRun:  3
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\ndl14_hgt1_r3\ndl14_ht1_r3_
+reference image (ref_index =?):  -685
+last image before impacting (LastIm =?):  -677
+Total 8 images have been processed, 2 have been circled, 6 have been centroided.
+------
+filename
+
+filename =
+
+    'C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt7_r2\20200108_ndl22_ht7_r2_-2277.bmp'
+
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           16           52        50.51
+
+currentNdl: 22
+currentHight:  7
+currentRun:  2
+reference image (ref_index =?):  -2405
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt7_r2\20200108_ndl22_ht7_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1067.3
+
+
+x2 =
+
+       1057.5
+
+    41
+
+have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           16           54       46.566
+
+currentNdl: 22
+currentHight:  7
+currentRun:  3
+reference image (ref_index =?):  -774
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt7_r3\20200108_ndl22_ht7_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1072.2
+
+
+x2 =
+
+         1055
+
+    45
+
+have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           16           58        17.67
+
+currentNdl: 22
+currentHight:  7
+currentRun:  4
+reference image (ref_index =?):  -1008
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200108_ndl22_hgt7_r4\20200108_ndl22_ht7_r4_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+
+x1 =
+
+       1069.7
+
+
+x2 =
+
+         1055
+
+    47
+
+have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           17            2        0.243
+
+currentNdl: 14
+currentHight:  0
+currentRun:  1
+reference image (ref_index =?):  -652
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt0_r1\20200109_ndl14_ht0_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+125 have been profiled.----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           17            5        2.355
+
+currentNdl: 14
+currentHight:  0
+currentRun:  2
+reference image (ref_index =?):  -536
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt0_r2\20200109_ndl14_ht0_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+117 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           17            6       40.795
+
+currentNdl: 14
+currentHight:  0
+currentRun:  3
+reference image (ref_index =?):  -600
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt0_r3\20200109_ndl14_ht0_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+106 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           17            8        9.369
+
+currentNdl: 14
+currentHight:  1
+currentRun:  1
+reference image (ref_index =?):  -573
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt1_r1\20200109_ndl14_ht1_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+130 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           17           14        4.072
+
+currentNdl: 14
+currentHight:  1
+currentRun:  2
+reference image (ref_index =?):  -739
+Please enter the number of first image of stalk (FirstIm =?):  -717
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt1_r2\20200109_ndl14_ht1_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+336 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           17           18       19.598
+
+currentNdl: 14
+currentHight:  1
+currentRun:  3
+reference image (ref_index =?):  -585
+Please enter the number of first image of stalk (FirstIm =?):  -523
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt1_r3\20200109_ndl14_ht1_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+119 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3            5           17           21       58.599
+
+currentNdl: 14
+currentHight:  2
+currentRun:  1
+reference image (ref_index =?):  -616
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt2_r1\20200109_ndl14_ht2_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+101 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           13           35
+
+  Column 6
+
+        34.88
+
+currentNdl: 14
+currentHight:  2
+currentRun:  3
+reference image (ref_index =?):  -1224
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt2_r3\20200109_ndl14_ht2_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+98 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           13           37
+
+  Column 6
+
+       12.981
+
+currentNdl: 14
+currentHight:  3
+currentRun:  1
+reference image (ref_index =?):  -968
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt3_r1\20200109_ndl14_ht3_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+51 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           13           38
+
+  Column 6
+
+       34.547
+
+currentNdl: 14
+currentHight:  3
+currentRun:  1
+reference image (ref_index =?):  -968
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt3_r1\20200109_ndl14_ht3_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+64 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           13           39
+
+  Column 6
+
+       49.955
+
+currentNdl: 14
+currentHight:  3
+currentRun:  2
+reference image (ref_index =?):  -967
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt3_r2\20200109_ndl14_ht3_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+134 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           13           41
+
+  Column 6
+
+       35.387
+
+currentNdl: 14
+currentHight:  3
+currentRun:  3
+reference image (ref_index =?):  -740
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt3_r3\20200109_ndl14_ht3_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+134 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           13           43
+
+  Column 6
+
+       32.385
+
+currentNdl: 14
+currentHight:  4
+currentRun:  1
+reference image (ref_index =?):  -428
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt4_r1\20200109_ndl14_ht4_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+109 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           13           46
+
+  Column 6
+
+        4.285
+
+currentNdl: 14
+currentHight:  4
+currentRun:  2
+reference image (ref_index =?):  -576
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt4_r2\20200109_ndl14_ht4_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+111 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           13           47
+
+  Column 6
+
+       58.308
+
+currentNdl: 14
+currentHight:  4
+currentRun:  3
+reference image (ref_index =?):  -967
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt4_r3\20200109_ndl14_ht4_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+110 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           13           49
+
+  Column 6
+
+       56.324
+
+currentNdl: 14
+currentHight:  5
+currentRun:  1
+reference image (ref_index =?):  -614
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt5_r1\20200109_ndl14_ht5_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+101 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           13           51
+
+  Column 6
+
+       36.979
+
+currentNdl: 14
+currentHight:  5
+currentRun:  2
+reference image (ref_index =?):  -369
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt5_r2\20200109_ndl14_ht5_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+99 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           13           53
+
+  Column 6
+
+       33.292
+
+currentNdl: 14
+currentHight:  5
+currentRun:  3
+reference image (ref_index =?):  -442
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt5_r3\20200109_ndl14_ht5_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+100 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           13           55
+
+  Column 6
+
+        5.762
+
+currentNdl: 14
+currentHight:  6
+currentRun:  1
+reference image (ref_index =?):  -592
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt6_r1\20200109_ndl14_ht6_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+94 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           13           56
+
+  Column 6
+
+       29.983
+
+currentNdl: 14
+currentHight:  6
+currentRun:  2
+reference image (ref_index =?):  -602
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt6_r2\20200109_ndl14_ht6_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+100 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           13           57
+
+  Column 6
+
+       58.367
+
+currentNdl: 14
+currentHight:  6
+currentRun:  3
+reference image (ref_index =?):  -404
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt6_r3\20200109_ndl14_ht6_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+100 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14            0
+
+  Column 6
+
+       12.945
+
+currentNdl: 14
+currentHight:  7
+currentRun:  1
+reference image (ref_index =?):  -959
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt7_r1\20200109_ndl14_ht7_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+92 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14            1
+
+  Column 6
+
+       45.162
+
+currentNdl: 14
+currentHight:  7
+currentRun:  2
+reference image (ref_index =?):  -690
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt7_r2\20200109_ndl14_ht7_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+87 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14            6
+
+  Column 6
+
+       50.443
+
+currentNdl: 14
+currentHight:  7
+currentRun:  3
+reference image (ref_index =?):  -610
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl14_hgt7_r3\20200109_ndl14_ht7_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+80 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14            8
+
+  Column 6
+
+       37.122
+
+currentNdl: 18
+currentHight:  0
+currentRun:  1
+reference image (ref_index =?):  -497
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt0_r1\20200109_ndl18_ht0_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+76 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           10
+
+  Column 6
+
+       41.386
+
+currentNdl: 18
+currentHight:  0
+currentRun:  1
+reference image (ref_index =?):  -497
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt0_r1\20200109_ndl18_ht0_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+84 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           14
+
+  Column 6
+
+       35.807
+
+currentNdl: 18
+currentHight:  04
+currentRun:  -704
+reference image (ref_index =?):  11
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt4_r-704\20200109_ndl18_ht4_r-704_
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imread>get_full_filename', 'C:\Program Files\MATLAB\R2019b\toolbox\matlab\imagesci\imread.m', 566)" style="font-weight:bold">imread>get_full_filename</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2019b\toolbox\matlab\imagesci\imread.m',566,0)">line 566</a>)
+File
+"C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt4_r-704\20200109_ndl18_ht4_r-704_00011.bmp.bmp"
+does not exist.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('imread', 'C:\Program Files\MATLAB\R2019b\toolbox\matlab\imagesci\imread.m', 409)" style="font-weight:bold">imread</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2019b\toolbox\matlab\imagesci\imread.m',409,0)">line 409</a>)
+                fullname = get_full_filename([filename, '.',
+                fmt_s.ext{p}]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Impact_stalk_2020feb24_a_WU_copy', 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\Impact_stalk_2020feb24_a_WU_copy.m', 71)" style="font-weight:bold">Impact_stalk_2020feb24_a_WU_copy</a> (<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\Impact_stalk_2020feb24_a_WU_copy.m',71,0)">line 71</a>)
+ref_a = imread(strcat(prefix,num2str(ref_index, '%05g'),ext),'bmp');
+} 
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           14
+
+  Column 6
+
+       53.528
+
+currentNdl: 18
+currentHight:  0
+currentRun:  4
+reference image (ref_index =?):  -704
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt0_r4\20200109_ndl18_ht0_r4_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+90 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           16
+
+  Column 6
+
+       17.433
+
+currentNdl: 18
+currentHight:  0
+currentRun:  5
+reference image (ref_index =?):  -569
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt0_r5\20200109_ndl18_ht0_r5_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+118 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           18
+
+  Column 6
+
+       17.061
+
+currentNdl: 18
+currentHight:  0
+currentRun:  6
+reference image (ref_index =?):  -824
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt0_r6\20200109_ndl18_ht0_r6_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+92 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           20
+
+  Column 6
+
+       22.914
+
+currentNdl: 18
+currentHight:  0
+currentRun:  6
+reference image (ref_index =?):  -824
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt0_r6\20200109_ndl18_ht0_r6_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+92 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           21
+
+  Column 6
+
+       37.926
+
+currentNdl: 18
+currentHight:  0
+currentRun:  6
+reference image (ref_index =?):  -824
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt0_r6\20200109_ndl18_ht0_r6_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+92 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           25
+
+  Column 6
+
+       34.974
+
+currentNdl: 18
+currentHight:  1
+currentRun:  1
+reference image (ref_index =?):  -2325
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt1_r1\20200109_ndl18_ht1_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+126 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           27
+
+  Column 6
+
+       36.324
+
+currentNdl: 18
+currentHight:  1
+currentRun:  2
+reference image (ref_index =?):  -613
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt1_r2\20200109_ndl18_ht1_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+111 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           30
+
+  Column 6
+
+        6.562
+
+currentNdl: 18
+currentHight:  1
+currentRun:  3
+reference image (ref_index =?):  -656
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt1_r3\20200109_ndl18_ht1_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+131 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           31
+
+  Column 6
+
+       53.172
+
+currentNdl: 18
+currentHight:  2
+currentRun:  1
+reference image (ref_index =?):  -723
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt2_r1\20200109_ndl18_ht2_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+130 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           37
+
+  Column 6
+
+       31.743
+
+currentNdl: 18
+currentHight:  2
+currentRun:  2
+reference image (ref_index =?):  -376
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt2_r2\20200109_ndl18_ht2_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+119 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           39
+
+  Column 6
+
+        6.447
+
+currentNdl: 18
+currentHight:  2
+currentRun:  3
+reference image (ref_index =?):  -580
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt2_r3\20200109_ndl18_ht2_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+111 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           40
+
+  Column 6
+
+        39.28
+
+currentNdl: 18
+currentHight:  3
+currentRun:  1
+reference image (ref_index =?):  -463
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt3_r1\20200109_ndl18_ht3_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+122 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           42
+
+  Column 6
+
+       26.379
+
+currentNdl: 18
+currentHight:  3
+currentRun:  2
+reference image (ref_index =?):  -650
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt3_r2\20200109_ndl18_ht3_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+107 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           43
+
+  Column 6
+
+       52.998
+
+currentNdl: 18
+currentHight:  3
+currentRun:  3
+reference image (ref_index =?):  -630
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt3_r3\20200109_ndl18_ht3_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+122 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           45
+
+  Column 6
+
+       26.889
+
+currentNdl: 18
+currentHight:  4
+currentRun:  1
+reference image (ref_index =?):  -740
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt4_r1\20200109_ndl18_ht4_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+101 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           47
+
+  Column 6
+
+       27.812
+
+currentNdl: 18
+currentHight:  4
+currentRun:  2
+reference image (ref_index =?):  1226
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt4_r2\20200109_ndl18_ht4_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+106 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           48
+
+  Column 6
+
+       53.673
+
+currentNdl: 18
+currentHight:  4
+currentRun:  3
+reference image (ref_index =?):  -695
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt4_r3\20200109_ndl18_ht4_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+106 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           50
+
+  Column 6
+
+       28.293
+
+currentNdl: 18.
+currentHight:  5
+currentRun:  1
+reference image (ref_index =?):  -530
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt5_r1\20200109_ndl18_ht5_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+104 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           52
+
+  Column 6
+
+       26.776
+
+currentNdl: 18
+currentHight:  5
+currentRun:  2
+reference image (ref_index =?):  -411
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt5_r2\20200109_ndl18_ht5_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+112 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           54
+
+  Column 6
+
+       48.139
+
+currentNdl: 18
+currentHight:  5
+currentRun:  3
+reference image (ref_index =?):  -1082
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt5_r3\20200109_ndl18_ht5_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+107 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           56
+
+  Column 6
+
+       40.736
+
+currentNdl: 18
+currentHight:  6
+currentRun:  1
+reference image (ref_index =?):  -475
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt6_r1\20200109_ndl18_ht6_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+112 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           58
+
+  Column 6
+
+       13.546
+
+currentNdl: 18
+currentHight:  6
+currentRun:  2
+reference image (ref_index =?):  -544
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt6_r2\20200109_ndl18_ht6_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+80 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           14           59
+
+  Column 6
+
+       38.365
+
+currentNdl: 18
+currentHight:  6
+currentRun:  3
+reference image (ref_index =?):  -544
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt6_r3\20200109_ndl18_ht6_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+88 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           15            1
+
+  Column 6
+
+         1.42
+
+currentNdl: 18
+currentHight:  7
+currentRun:  1
+reference image (ref_index =?):  -610
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt7_r1\20200109_ndl18_ht7_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+69 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           15            2
+
+  Column 6
+
+        5.641
+
+currentNdl: 18
+currentHight:  7
+currentRun:  2
+reference image (ref_index =?):  -682
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt7_r2\20200109_ndl18_ht7_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+66 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           15            3
+
+  Column 6
+
+       22.381
+
+currentNdl: 18
+currentHight:  7
+currentRun:  3
+reference image (ref_index =?):  -431
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl18_hgt7_r3\20200109_ndl18_ht7_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+73 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           15            4
+
+  Column 6
+
+       37.275
+
+currentNdl: 22
+currentHight:  0
+currentRun:  1
+reference image (ref_index =?):  -513
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl22_hgt0_r1\20200109_ndl22_ht0_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+126 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           15            6
+
+  Column 6
+
+       25.247
+
+currentNdl: 22
+currentHight:  0
+currentRun:  2
+reference image (ref_index =?):  -582
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl22_hgt0_r2\20200109_ndl22_ht0_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+108 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           15            7
+
+  Column 6
+
+       50.826
+
+currentNdl: 22
+currentHight:  0
+currentRun:  3
+reference image (ref_index =?):  -567
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl22_hgt0_r3\20200109_ndl22_ht0_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+209 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           15           10
+
+  Column 6
+
+       13.645
+
+currentNdl: 22
+currentHight:  1
+currentRun:  1
+reference image (ref_index =?):  -714
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl22_hgt1_r1\20200109_ndl22_ht1_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+85 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           15           18
+
+  Column 6
+
+       51.597
+
+currentNdl: 22
+currentHight:  1
+currentRun:  2
+reference image (ref_index =?):  -606
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl22_hgt1_r2\20200109_ndl22_ht1_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+92 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3            9           15           24
+
+  Column 6
+
+       14.648
+
+currentNdl: 22
+currentHight:  1
+currentRun:  3
+reference image (ref_index =?):  -810
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl22_hgt1_r3\20200109_ndl22_ht1_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+99 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3           17           18           59       52.084
+
+currentNdl: 22
+currentHight:  {Operation terminated by user during
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('Impact_stalk_2020feb24_a_WU_copy', 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\Impact_stalk_2020feb24_a_WU_copy.m', 15)" style="font-weight:bold">Impact_stalk_2020feb24_a_WU_copy</a> (<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\Impact_stalk_2020feb24_a_WU_copy.m',15,0)">line 15</a>)
+} 
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3           17           19           10
+
+  Column 6
+
+       14.592
+
+currentNdl: 22
+currentHight:  3
+currentRun:  1
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl22_hgt3_r1\20200109_ndl22_ht3_r1_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+93 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3           17           19           11
+
+  Column 6
+
+       52.542
+
+currentNdl: 22
+currentHight:  3
+currentRun:  2
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl22_hgt3_r2\20200109_ndl22_ht3_r2_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+92 have been profiled.
+----------------------------------
+Impact_stalk_2020feb24_a_WU_copy
+  Columns 1 through 5
+
+         2020            3           17           19           13
+
+  Column 6
+
+       36.353
+
+currentNdl: 22
+currentHight:  3
+currentRun:  3
+C:\Users\lab-admin\Desktop\Lichen_Wu\movies_processed\20200109_ndl22_hgt3_r3\20200109_ndl22_ht3_r3_
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+96 have been profiled.
+----------------------------------
+sendmail
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sendmail', 'C:\Program Files\MATLAB\R2019b\toolbox\matlab\iofun\sendmail.m', 44)" style="font-weight:bold">sendmail</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2019b\toolbox\matlab\iofun\sendmail.m',44,0)">line 44</a>)
+Not enough input arguments.
+} 
+sendmail(recipients,subject)
+{Unrecognized function or variable 'recipients'.
+} 
+sendmail(recipients,subject)
+{Unrecognized function or variable 'recipients'.
+} 
+sendmail(wulicheneason@gmail.com, no_subject)
+{'gmail.com' is not a valid base class.
+} 
+sendmail('wulicheneason@gmail.com', no_subject)
+{Unrecognized function or variable 'no_subject'.
+} 
+sendmail('wulicheneason@gmail.com', 'no_subject')
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sendmail', 'C:\Program Files\MATLAB\R2019b\toolbox\matlab\iofun\sendmail.m', 61)" style="font-weight:bold">sendmail</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2019b\toolbox\matlab\iofun\sendmail.m',61,0)">line 61</a>)
+Could not determine SMTP server.  You can set one like this:
+setpref('Internet','SMTP_Server','myserver.myhost.com');
+} 
+mail = 'wulicheneason@gmail.com';
+password = '$%@!Wu201806';
+setpref('Internet','SMTP_Server','smtp.gmail.com');
+sendmail('245484867@qq.com','from matlab')
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sendmail', 'C:\Program Files\MATLAB\R2019b\toolbox\matlab\iofun\sendmail.m', 65)" style="font-weight:bold">sendmail</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2019b\toolbox\matlab\iofun\sendmail.m',65,0)">line 65</a>)
+Could not determine FROM address.  You can set one like this:
+setpref('Internet','E_mail','username@example.com');
+} 
+setpref('Internet','E_mail',mail);
+setpref('Internet','SMTP_Username',mail);
+setpref('Internet','SMTP_Password',password);
+props = java.lang.System.getProperties;
+props.setProperty('mail.smtp.auth','true');
+props.setProperty('mail.smtp.socketFactory.class', 'javax.net.ssl.SSLSocketFactory');
+props.setProperty('mail.smtp.socketFactory.port','465');
+sendmail('245484867@qq.com','from matlab')
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sendmail', 'C:\Program Files\MATLAB\R2019b\toolbox\matlab\iofun\sendmail.m', 175)" style="font-weight:bold">sendmail</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2019b\toolbox\matlab\iofun\sendmail.m',175,0)">line 175</a>)
+Authentication failed.
+} 
+sendmail('245484867@qq.com','from matlab')
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sendmail', 'C:\Program Files\MATLAB\R2019b\toolbox\matlab\iofun\sendmail.m', 175)" style="font-weight:bold">sendmail</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2019b\toolbox\matlab\iofun\sendmail.m',175,0)">line 175</a>)
+Authentication failed.
+} 
+props = java.lang.System.getProperties;
+props.setProperty('mail.smtp.auth','true');
+setpref('Internet','SMTP_Username',mail);
+setpref('Internet','SMTP_Password',password);
+sendmail('245484867@qq.com','from matlab')
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sendmail', 'C:\Program Files\MATLAB\R2019b\toolbox\matlab\iofun\sendmail.m', 175)" style="font-weight:bold">sendmail</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2019b\toolbox\matlab\iofun\sendmail.m',175,0)">line 175</a>)
+Authentication failed.
+} 
+setpref('Internet','E_mail',mail);
+setpref('Internet','SMTP_Username',mail);
+setpref('Internet','SMTP_Password',password);
+props = java.lang.System.getProperties;
+props.setProperty('mail.smtp.auth','true');
+sendmail('245484867@qq.com','from matlab')
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sendmail', 'C:\Program Files\MATLAB\R2019b\toolbox\matlab\iofun\sendmail.m', 175)" style="font-weight:bold">sendmail</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2019b\toolbox\matlab\iofun\sendmail.m',175,0)">line 175</a>)
+Authentication failed.
+} 
+opentoline('C:\Program Files\MATLAB\R2019b\toolbox\matlab\iofun\sendmail.m',175,0)
