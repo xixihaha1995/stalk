@@ -294,13 +294,20 @@ for movie_itr = 6: 8
 
             plotxx = profile_x+y1;
             plotyy = profile_y+x1;
-            xxyy=vertcat(plotxx,plotyy);
+            plotxx_temp = transpose(plotxx);
+            plotyy_temp = transpose(plotyy);
+            xxyy=horzcat(plotxx_temp,plotyy_temp);
+            xxyy=sort(xxyy,1);
             
-            while plotxx(impact_left_index)<impact_index_xx-60 && left_saved==0;
+%             impact_left_index = round(impact_index_xx-60);
+%             impact_right_index = round(impact_index_xx+60);
+             
+            
+            while (xxyy(impact_left_index,1)<impact_index_xx-60) && (left_saved==0)
                 impact_left_index = impact_left_index +1;
             end
             left_saved=1;
-            while plotxx(impact_right_index)<impact_index_xx+60 && right_saved==0;
+            while (xxyy(impact_right_index,1)<impact_index_xx+60) && (right_saved==0)
                 impact_right_index = impact_right_index +1;
             end
             right_saved=1;
@@ -322,6 +329,7 @@ for movie_itr = 6: 8
 %             end
             impactyy=plotyy(impact_left_index:impact_right_index);
             impactxx=plotxx(impact_left_index:impact_right_index);
+            impactxx = impact_left_index:impact_right_index;
             
             
 
@@ -334,7 +342,7 @@ for movie_itr = 6: 8
             
             [heightYY,minH_index] = min(impactyy);
             heightXX = impactxx(minH_index);
-            fprintf('img%s impXX=%d  impYY=%d\n',img_dir(ii).name,heightXX,heightYY);
+%             fprintf('img%s impXX=%d  impYY=%d\n',img_dir(ii).name,heightXX,heightYY);
             
             if i == 0
                 heightYY_old = heightYY;
@@ -345,12 +353,13 @@ for movie_itr = 6: 8
                 heightYY_old = heightYY;
                 %         disp(heightYY_old)
             end
-            if increaseHight>4 && growing == 0 && abs(mean(impactyy)-level)<20
+            if increaseHight>12 && growing == 0 
                 jet_growing_index=ii;
                 growing =1;
                 disp(jet_growing_index)
+            end
             
-            if increaseHight>4 && save_grow < 6
+            if growing==1 && save_grow < 6
                 if increaseHight>20
                     ii = ii + 1;
 %                     prefix = strcat(prefix_1,prefix_14,prefix_15,prefix_10,prefix_11,prefix_6,...
@@ -365,7 +374,7 @@ for movie_itr = 6: 8
                 save_grow = save_grow + 1;
                 continue
             end
-            if  increaseHight>4 && save_grow == 5
+            if  growing==1 && save_grow == 6
                 fprintf('%s to %s are jet growing\n', img_dir(jet_growing_index).name,img_dir(ii).name);
                 disp('---------------')
                 diary 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\profileVelocity\jetVelocities'
@@ -385,17 +394,16 @@ for movie_itr = 6: 8
             fprintf(fid, '%8.2f \t %8.2f\n',[profile_x; -profile_y]); 
             fclose(fid);
             clear profile_x profile_y  
-            end
-        
-        
-        continue
+            
         end
-
+        continue
     end
     cd ..
-    
 
 end
+    
+    
+
         
     
 
