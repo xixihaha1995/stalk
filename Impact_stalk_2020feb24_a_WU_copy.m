@@ -23,6 +23,9 @@ level_out = strcat(levelDir,'level',extlevel_out);
 outDir = 'C:\Users\lab-admin\Desktop\Lichen_Wu\movies_circled\';
 filename_out = strcat(outDir,'circled',ext_out);
 
+outDir_prof = 'C:\Users\lab-admin\Desktop\Lichen_Wu\movies_profiled\';
+filename_out_prof = strcat(outDir,'JetVel',ext_out);
+
 for movie_itr = 6: 8
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
@@ -60,6 +63,8 @@ for movie_itr = 6: 8
     numCircledFailuer = 0;
     totalNumber = 0;
     skipped = 0;
+    increaseHight = 0;
+    i=0;
    
     
     fid = fopen(level_out,'a');
@@ -241,10 +246,77 @@ for movie_itr = 6: 8
             % alpha = 0; %The flat surface has aero angle in image 
             profile_x = (y_temp-x1).*sin(alpha)+(x_temp-y1).*cos(alpha);
             profile_y = (y_temp-x1).*cos(alpha)-(x_temp-y1).*sin(alpha);
+            
+
 
             plot(profile_x+y1, profile_y+x1, 'y')
             hold off
+%             find the jetVel
+%             find the jetVel
 
+            x = profile_x;
+            y = 1000 - profile_y;
+            [heightYY,minH_index] = min(y);
+            heightXX = x(minH_index);
+            fprintf('img%s impXX=%d  impYY=%d\n',img_dir(ii).name,heightXX,heightYY);
+            
+            if i == 0
+                heightYY_old = heightYY;
+                i = i+1;
+                %         disp(heightYY_old)
+            else
+                increaseHight = heightYY_old - heightYY;
+                heightYY_old = heightYY;
+                %         disp(heightYY_old)
+            end
+            
+            
+            if increaseHight>4
+                if increaseHight>20
+                    ii = ii + 1;
+%                     prefix = strcat(prefix_1,prefix_14,prefix_15,prefix_10,prefix_11,prefix_6,...
+%                         prefix_7,prefix_2,prefix_3,prefix_12,prefix_13,prefix_8,prefix_9,prefix_4,prefix_5,num2str(ii, '%05g'),ext);
+                end
+                
+                for i = 1:5
+                    x = profile_x;
+                    y = 1000 - profile_y;
+                    [heightYY,minH_index] = min(y);
+                    heightXX = x(minH_index);
+
+                    
+%                     x = C{1};
+%                     y = 1000 - C{2};
+%                     [heightYY,minH_index] = min(y);
+%                     heightXX = x(minH_index);
+
+                    fid = fopen(filename_out_prof,'a');
+                    fprintf(fid,'%s',[img_dir(ii).name]);
+                    fprintf(fid, '\t %d \t  %d \t  %d \t  %d \t  %d \t  %d \t  %d \t %8.2f\n',...
+                        [c(1);c(2);c(3);c(4);c(5);c(6);heightXX;heightYY]); %relative to flat surface
+                    fclose(fid);
+                    continue
+
+%                     ii = ii+1;
+%                     prefix = strcat(prefix_1,prefix_14,prefix_15,prefix_10,prefix_11,prefix_6,...
+%                         prefix_7,prefix_2,prefix_3,prefix_12,prefix_13,prefix_8,prefix_9,prefix_4,prefix_5,num2str(ii, '%05g'),ext);
+                end
+                fprintf('%d to %d are jet growing\n', ii-5,ii-1);
+%               break/continue
+            end
+%             saved jet vel
+%             saved jet vel
+
+% find max height
+% find max height
+
+% saved max height
+% saved max height
+
+            
+        
+
+            
             filename_out = strcat(filename,ext_out);
             fid = fopen(filename_out,'w');
             %relative to flat surface
