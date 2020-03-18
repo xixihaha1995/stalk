@@ -296,8 +296,8 @@ for movie_itr = 6: 8
             plotyy = profile_y+x1;
             plotxx_temp = transpose(plotxx);
             plotyy_temp = transpose(plotyy);
-            xxyy=horzcat(plotxx_temp,plotyy_temp);
-            xxyy=sort(xxyy,1);
+            xxyy_old=horzcat(plotxx_temp,plotyy_temp);
+            xxyy=sortrows(xxyy_old,1);
             
 %             impact_left_index = round(impact_index_xx-60);
 %             impact_right_index = round(impact_index_xx+60);
