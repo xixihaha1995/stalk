@@ -134,24 +134,15 @@ for movie_itr = 3: size(movie_dir)
         plot(profile_x+y1, profile_y+x1, 'y')
         hold off
 
- 
-
-filename_out = strcat(prefix, num2str(ii, '%05g'),ext_out);
-fid = fopen(filename_out,'w');
-fprintf(fid, '%8.2f \t %8.2f\n',[profile_x; -profile_y]); %relative to flat surface
-fclose(fid);
-clear profile_x profile_y
-
-cd ..
-
-
-
-end
+        filename_out = strcat(filename,ext_out);
+        fid = fopen(filename_out,'w');
+        %relative to flat surface
+        fprintf(fid, '%8.2f \t %8.2f\n',[profile_x; -profile_y]); 
+        fclose(fid);
+        clear profile_x profile_y
+        cd ..
+    end
     
-  
-
-        
-        
 end
 
         
