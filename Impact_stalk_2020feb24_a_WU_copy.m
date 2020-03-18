@@ -45,6 +45,7 @@ for movie_itr = 6: 8
     
     Impact_location = 1225; 
     
+    
     y2 = Impact_location+500;
     y1 = Impact_location-500;
 
@@ -91,6 +92,24 @@ for movie_itr = 6: 8
     
     for ii = size(img_dir):-1:3
         filename = strcat(img_dir(ii).name);
+%         save impact index
+%         save impact index
+
+        impact_saved = 0;
+        if impact_saved ==0;
+            impact_index=size(img_dir)-100
+            if ref_index == ii || contains(filename,'.bmp') == 0 ||...
+                    contains(filename,'.txt')
+                continue
+            end
+            
+            figure();
+            imshow(img_dir(impact_index).name)
+            set(gcf,'WindowState','maximized')
+            [impact_index_xx,impact_index_yy] = ginput(1);
+            impact_saved = 1;
+        end
+            
 
 %         skip  non-.bmp file, skip txt file(including .bmp ext)
         if ref_index == ii || contains(filename,'.bmp') == 0 ||...
@@ -266,13 +285,13 @@ for movie_itr = 6: 8
             xxyy=vertcat(plotxx,plotyy);
             
             for impact_left_index=1:size(plotxx)
-                if plotxx(impact_left_index)>Impact_location-60
+                if plotxx(impact_left_index)>impact_index_xx-60
                     break
                 end
             end
             
             for impact_right_index=size(plotxx):-1:1
-                if plotxx(impact_right_index)<Impact_location-60
+                if plotxx(impact_right_index)<impact_index_xx+60
                     break
                 end
             end
@@ -300,7 +319,7 @@ for movie_itr = 6: 8
                 heightYY_old = heightYY;
                 %         disp(heightYY_old)
             end
-            if increaseHight>4 && growing == 0 && abs(mean(y)-level)<5
+            if increaseHight>4 && growing == 0 && abs(mean(impactyy)-level)<5
                 jet_growing_index=ii;
                 growing =1;
                 disp(jet_growing_index)
