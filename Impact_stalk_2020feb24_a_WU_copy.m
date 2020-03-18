@@ -258,9 +258,36 @@ for movie_itr = 6: 8
 %             find the jetVel
 %             find the jetVel
 
+% find impact location
+% find impact location
+
+            plotxx = profile_x+y1;
+            plotyy = profile_y+x1;
+            xxyy=vertcat(plotxx,plotyy);
+            
+            for impact_left_index=1:size(plotxx)
+                if plotxx(impact_left_index)>Impact_location-60
+                    break
+                end
+            end
+            
+            for impact_right_index=size(plotxx):-1:1
+                if plotxx(impact_right_index)<Impact_location-60
+                    break
+                end
+            end
+            impactyy=plotyy(impact_left_index,impact_right_index)
+            
+            
+
+
+
+%             plot(xxyy(1,:),xxyy(2,:),'r')
+
             x = profile_x;
             y = 1000 - profile_y;
-            [heightYY,minH_index] = min(y);
+            
+            [heightYY,minH_index] = min(impactyy);
             heightXX = x(minH_index);
             fprintf('img%s impXX=%d  impYY=%d\n',img_dir(ii).name,heightXX,heightYY);
             
