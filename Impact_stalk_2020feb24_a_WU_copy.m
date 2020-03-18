@@ -21,16 +21,50 @@ levelDir = 'C:\Users\lab-admin\Desktop\Lichen_Wu\movies_leveled\';
 level_out = strcat(levelDir,'level',extlevel_out);
 
 for movie_itr = 3: size(movie_dir)
-    cd(strcat(movie_dir(movie_itr).name,'\'));
+    movie_folder_name = movie_dir(movie_itr).name;
+    cd(strcat(movie_folder_name,'\'));
     img_dir=dir(strcat(movie_dir(movie_itr).folder,'\',movie_dir(movie_itr).name));
-    ref_index = size(img_dir);
+    [ref_index,ref_indexUseless] = size(img_dir);
+    ref_index = ref_index -1;
     FirstIm = ref_index - 40;
     
-    ref_file = strcat(img_dir(ref_index).folder,img_dir(ref_index).name);
+    ref_file = strcat(img_dir(ref_index).name);
+%     if a bmp file
+%     contains(ref_file,'.bmp')
+
     ref_a = imread(ref_file);
     
     Impact_location = 1225; 
-   
+    
+    y2 = Impact_location+500;
+    y1 = Impact_location-500;
+
+    figure(1);
+    set(gcf,'WindowState','maximized')
+
+    plot(smooth(double((ref_a(:, Impact_location-500)))),'r');
+    hold on
+    plot(smooth(double((ref_a(:, Impact_location+500)))), 'g');
+    hold off
+    disp('Stretch figure 1 horizontally for a better resolution..... ')
+    disp('Click on the middle pick in red line once: ?')
+    [x1,y1g] = ginput(1);
+    disp(' ... ')
+    disp('Click on the middle pick in green line once: ?')
+    [x2,y2g] = ginput(1);
+    fid = fopen(level_out,'a');
+    fprintf(fid,'\n');
+    
+%     fprintf(fid,'%s',[movie_folder_name]);
+%     fprintf(fid,'\t %d \t %d \t %d \t %d \t %d \t %d \t %d \t %d\n',[c(1);c(2);c(3);c(4);c(5);c(6);x1;x2]);
+    
+%     fprintf(fid, '%s \t %d \t %d \t %d \t %d \t %d \t %d \t %d \t %d\n',...
+%         [movie_folder_name;c(1);c(2);c(3);c(4);c(5);c(6);x1;x2]);
+
+%     fprintf(fid, '%s \t %d \t %d \t %d \t %d \t %d \t %d \t %d \t %d\n',...
+%         [movie_folder_name;c(1);c(2);c(3);c(4);c(5);c(6);x1;x2]); 
+    fclose(fid);
+
     
     for img_itr = size(img_dir):-1:3
         
@@ -90,29 +124,9 @@ end
 %x1=1082; 
 %x2 = 1075; 
 
-% y2 = Impact_location+500;
-% y1 = Impact_location-500;
-% 
-% figure(1);
-% set(gcf,'WindowState','maximized')
-% 
-% plot(smooth(double((ref_a(:, Impact_location-500)))),'r');
-% hold on
-% plot(smooth(double((ref_a(:, Impact_location+500)))), 'g');
-% hold off
-% disp('Stretch figure 1 horizontally for a better resolution..... ')
-% disp('Click on the middle pick in red line once: ?')
-% [x1,y1g] = ginput(1);
-% disp(' ... ')
-% disp('Click on the middle pick in green line once: ?')
-% [x2,y2g] = ginput(1);
-% % disp('Save the values of x1 and x2 in this program for our record.... !')
-% 
-% fid = fopen(level_out,'a');
-% fprintf(fid, '%d \t %d \t %d \t %d \t %d \t %d \t %d \t %d \t %d \t %d \t %d \t %8.2f\n',...
-%     [currentDate;currentNdl;currentHight;currentRun;c(1);c(2);c(3);c(4);c(5);c(6);x1;x2]); 
-% fclose(fid);
-% 
+
+
+
 % figure(2); imshow(ref_a);
 % hold on
 % plot([y1 y2], [x1 x2], 'r')
