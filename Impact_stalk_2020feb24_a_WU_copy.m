@@ -26,6 +26,9 @@ filename_out = strcat(outDir,'circled',ext_out);
 outDir_prof = 'C:\Users\lab-admin\Desktop\Lichen_Wu\movies_profiled\';
 filename_out_prof = strcat(outDir,'JetVel',ext_out);
 
+growing = 0;
+save_grow = 0;
+
 for movie_itr = 6: 8
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
@@ -205,6 +208,7 @@ for movie_itr = 6: 8
                 totalNumber, totalNumber - numCircledFailuer, numCircledFailuer);
             disp('------');
             diary 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\circle_droplet\circleDiaryFile'
+            continue
         end
             
         
@@ -269,40 +273,30 @@ for movie_itr = 6: 8
                 heightYY_old = heightYY;
                 %         disp(heightYY_old)
             end
+            if increaseHight>4 && growing == 0 && abs(mean(y)-level)<5
+                jet_growing_index=ii;
+                growing =1;
+                disp(jet_growing_index)
             
-            
-            if increaseHight>4
+            if increaseHight>4 && save_grow < 5
                 if increaseHight>20
                     ii = ii + 1;
 %                     prefix = strcat(prefix_1,prefix_14,prefix_15,prefix_10,prefix_11,prefix_6,...
 %                         prefix_7,prefix_2,prefix_3,prefix_12,prefix_13,prefix_8,prefix_9,prefix_4,prefix_5,num2str(ii, '%05g'),ext);
                 end
                 
-                for i = 1:5
-                    x = profile_x;
-                    y = 1000 - profile_y;
-                    [heightYY,minH_index] = min(y);
-                    heightXX = x(minH_index);
-
-                    
-%                     x = C{1};
-%                     y = 1000 - C{2};
-%                     [heightYY,minH_index] = min(y);
-%                     heightXX = x(minH_index);
-
-                    fid = fopen(filename_out_prof,'a');
-                    fprintf(fid,'%s',[img_dir(ii).name]);
-                    fprintf(fid, '\t %d \t  %d \t  %d \t  %d \t  %d \t  %d \t  %d \t %8.2f\n',...
-                        [c(1);c(2);c(3);c(4);c(5);c(6);heightXX;heightYY]); %relative to flat surface
-                    fclose(fid);
-                    continue
-
-%                     ii = ii+1;
-%                     prefix = strcat(prefix_1,prefix_14,prefix_15,prefix_10,prefix_11,prefix_6,...
-%                         prefix_7,prefix_2,prefix_3,prefix_12,prefix_13,prefix_8,prefix_9,prefix_4,prefix_5,num2str(ii, '%05g'),ext);
-                end
-                fprintf('%d to %d are jet growing\n', ii-5,ii-1);
-%               break/continue
+                fid = fopen(filename_out_prof,'a');
+                fprintf(fid,'%s',[img_dir(ii).name]);
+                fprintf(fid, '\t %d \t  %d \t  %d \t  %d \t  %d \t  %d \t  %d \t %8.2f\n',...
+                    [c(1);c(2);c(3);c(4);c(5);c(6);heightXX;heightYY]); %relative to flat surface
+                fclose(fid);
+                save_grow = save_grow + 1;
+                continue
+            end
+            if  increaseHight>4 && save_grow == 5
+                fprintf('%s to %s are jet growing\n', img_dir(jet_growing_index).name,img_dir(ii).name);
+                disp('---------------')
+                diary 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\profileVelocity\jetVelocities'
             end
 %             saved jet vel
 %             saved jet vel
@@ -312,25 +306,24 @@ for movie_itr = 6: 8
 
 % saved max height
 % saved max height
-
-            
-        
-
-            
+  
             filename_out = strcat(filename,ext_out);
             fid = fopen(filename_out,'w');
             %relative to flat surface
             fprintf(fid, '%8.2f \t %8.2f\n',[profile_x; -profile_y]); 
             fclose(fid);
             clear profile_x profile_y  
-        end
+            end
+        
         
         continue
+        end
+
     end
     cd ..
     
-end
 
+end
         
     
 
