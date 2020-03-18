@@ -23,9 +23,21 @@ level_out = strcat(levelDir,'level',extlevel_out);
 for movie_itr = 3: size(movie_dir)
     cd(strcat(movie_dir(movie_itr).name,'\'));
     img_dir=dir(strcat(movie_dir(movie_itr).folder,'\',movie_dir(movie_itr).name));
-    img_dir = sortrows(img_dir,1,'descend');
+    ref_index = size(img_dir);
+    FirstIm = ref_index - 40;
     
-    for img_itr = 3: size(img_dir)
+    ref_file = strcat(img_dir(ref_index).folder,img_dir(ref_index).name);
+    ref_a = imread(ref_file);
+    
+    Impact_location = 1225; 
+   
+    
+    for img_itr = size(img_dir):-1:3
+        
+        
+    end
+    
+%     for img_itr = 3: size(img_dir)
         
 end
     
@@ -44,12 +56,12 @@ end
 % 
 % 
 % FirstIm = ref_index + 40;
-% 
-% 
-% 
-% 
-% 
-% 
+
+
+
+
+
+
 % 
 % % prefix = '../movies_processed/20200108_ndl18_hgt7_r3/20200108_ndl18_ht7_r3_';
 % 
@@ -66,23 +78,18 @@ end
 % %  %for images_2020feb24/ndl14_h4_r1_-0876.bmp
 % %  x1 = 1089;
 % %  x2 = 1084;
-% 
-% % ndl18_ht0_r3
+
+
 % ref_a = imread(strcat(prefix,num2str(ref_index, '%05g'),ext),'bmp'); 
-% % Impact_location = 1525; 
+% 
 % Impact_location = 1225; 
-% % Impact_location = 1127; 
-% % Impact_location = 1081;
-% % Impact_location = 969;
-% % Impact_location = 1380;
-% % Impact_location = 1433; 
-% % Impact_location = 1297; 
-% 
-% 
-% 
-% %x1=1082; 
-% %x2 = 1075; 
-% 
+
+
+
+
+%x1=1082; 
+%x2 = 1075; 
+
 % y2 = Impact_location+500;
 % y1 = Impact_location-500;
 % 
@@ -249,10 +256,10 @@ end
 %     
 %     cd ..
 % end
-     
-
-
-
+%      
+% 
+% 
+% 
 % for currentDate = 20200109 :20200110
 %     
 %     
@@ -262,9 +269,9 @@ end
 % currentNdl = input('currentNdl: ');
 % currentHight = input('currentHight:  ');
 % currentRun = input('currentRun:  ');
-
-
-
+% 
+% 
+% 
 % ext = '.bmp';
 % ext_out = '_test.txt';
 % extlevel_out = '.txt';
@@ -512,7 +519,7 @@ end
 %     
 % 
 % end
-
+% 
 
 
 
