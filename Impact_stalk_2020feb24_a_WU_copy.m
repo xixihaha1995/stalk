@@ -37,9 +37,10 @@ maxHeightYY=1500;
 maxH_index =1;
 
 
-for movie_itr = 141:154
+for movie_itr = 147:154
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
+    disp(movie_folder_name)
 %     img_dir_tem=dir(strcat(movie_dir(movie_itr).folder,'\',movie_dir(movie_itr).name));
     bmptable = dir('*.bmp');
 %         how to reverse iterate
@@ -82,10 +83,9 @@ for movie_itr = 141:154
     plot(smooth(double((ref_a(:, Impact_location+500)))), 'g');
     title(ref_file)
     hold off
-    disp('Stretch figure 1 horizontally for a better resolution..... ')
+    disp('Stretch figure 1 horizontally for a better resolution ')
     disp('Click on the middle pick in red line once: ?')
     [x1,y1g] = ginput(1);
-    disp(' ... ')
     disp('Click on the middle pick in green line once: ?')
     [x2,y2g] = ginput(1);
     
@@ -99,6 +99,8 @@ for movie_itr = 141:154
     i=0;
     impact_saved = 0;
     getAssumingImpact=0;
+    save_grow = 0;
+    growing = 0;
    
     
     fid = fopen(level_out,'a');
@@ -123,8 +125,8 @@ for movie_itr = 141:154
     for ii = size(img_dir):-1:3
         
         
-        growing = 0;
-        save_grow = 0;
+        
+
         
         filename = strcat(img_dir(ii).name);
 %         save impact index
@@ -273,7 +275,6 @@ for movie_itr = 141:154
             
             fprintf('Total %d images have been processed, %d have been circled, %d have been centroided.\n', ...
                 totalNumber, totalNumber - numCircledFailuer, numCircledFailuer);
-            disp('------');
             diary 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\circle_droplet\circleDiaryFile'
             continue
         end
@@ -429,8 +430,8 @@ for movie_itr = 141:154
             end
             if  growing==1 && save_grow == 10
                 growing=2;
-                fprintf('%s to %s are jet growing\n', img_dir(jet_growing_index).name,img_dir(ii).name);
-                disp('---------------')
+                fprintf('%s to %s are jet growing\n', img_dir(jet_growing_index).name,img_dir(ii+1).name);
+
                 diary 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\profileVelocity\jetVelocities'
             end
 %             saved jet vel
@@ -454,6 +455,8 @@ for movie_itr = 141:154
     fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d\n',...
         [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY]); %relative to flat surface
     fclose(fid);
+    fprintf('maxHeight=%d\n',maxHeightYY);
+    disp('---------------')
     diary 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_diary'
     cd(directory);
 end
