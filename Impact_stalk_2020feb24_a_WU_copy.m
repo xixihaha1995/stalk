@@ -190,8 +190,13 @@ for movie_itr = 6: 8
                 msg='locations of droplet are wrong';
                 error(msg)
                 end
-                
-                [centers,radii] = imfindcircles(BW,[28 50],'ObjectPolarity','bright');
+                if contains(filenameImpact,'ndl22')
+                    [centers,radii] = imfindcircles(BW,[28 50],'ObjectPolarity','bright');
+                elseif contains(filenameImpact,'ndl14')
+                    [centers,radii] = imfindcircles(BW,[38 65],'ObjectPolarity','bright');
+                end
+                    
+                    
                 siz=size(radii);
                 
                 
@@ -416,8 +421,8 @@ for movie_itr = 6: 8
     end
     
     fid = fopen(maxHeightfile,'a');
-    fprintf(fid,'%s',[img_dir.folder]);
-    fprintf(fid, '\t %d  \t %d\n',[maxHeightYY;level]); %relative to flat surface
+    fprintf(fid,'%s',[img_dir(ii).name]);
+    fprintf(fid, '\t %d \t  %d \t %d\n',[maxHeightYY;level;level-maxHeightYY]); %relative to flat surface
     fclose(fid);
     cd ..
 
