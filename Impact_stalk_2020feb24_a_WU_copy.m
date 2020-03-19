@@ -26,13 +26,17 @@ filename_out = strcat(outDir,'circled',ext_out);
 outDir_prof = 'C:\Users\lab-admin\Desktop\Lichen_Wu\movies_profiled\';
 filename_out_prof = strcat(outDir_prof,'JetVel',ext_out);
 
+maxHeightfile_Dir = 'C:\Users\lab-admin\Desktop\Lichen_Wu\movies_maxHeight\';
+maxHeightfile = strcat(maxHeightfile_Dir,'maxHeight',ext_out);
+
 growing = 0;
 save_grow = 0;
-impact_left_index=1;
-impact_right_index=1;
+
 left_saved=0;
 right_saved=0;
 
+maxHeightYY=1500;
+maxH_index =1;
 
 for movie_itr = 6: 8
     movie_folder_name = movie_dir(movie_itr).name;
@@ -302,15 +306,18 @@ for movie_itr = 6: 8
 %             impact_left_index = round(impact_index_xx-60);
 %             impact_right_index = round(impact_index_xx+60);
              
+            impact_left_index=1;
+            impact_right_index=1;
             
-            while (xxyy(impact_left_index,1)<impact_index_xx-60) && (left_saved==0)
+            while (xxyy(impact_left_index,1)<impact_index_xx-60)
                 impact_left_index = impact_left_index +1;
             end
-            left_saved=1;
-            while (xxyy(impact_right_index,1)<impact_index_xx+60) && (right_saved==0)
+
+            while (xxyy(impact_right_index,1)<impact_index_xx+60) 
                 impact_right_index = impact_right_index +1;
             end
-            right_saved=1;
+% saved impact location
+% saved impact location
             
 %             for itr=1:size(plotxx)
 %                 if plotxx(itr)>impact_index_xx-60
@@ -327,9 +334,9 @@ for movie_itr = 6: 8
 %                 end
 %                 continue
 %             end
-            impactyy=plotyy(impact_left_index:impact_right_index);
-            impactxx=plotxx(impact_left_index:impact_right_index);
-            impactxx = impact_left_index:impact_right_index;
+            impactyy = xxyy(impact_left_index:impact_right_index,2);
+            impactxx = xxyy(impact_left_index:impact_right_index,1);
+
             
             
 
@@ -342,6 +349,19 @@ for movie_itr = 6: 8
             
             [heightYY,minH_index] = min(impactyy);
             heightXX = impactxx(minH_index);
+            [currentHeight,cuH_index] = max(impactyy);
+            
+% find max height
+% find max height
+
+
+            if currentHeight< maxHeightYY
+                maxHeightYY = currentHeight;
+            end
+                
+% saved max height
+% saved max height
+            
 %             fprintf('img%s impXX=%d  impYY=%d\n',img_dir(ii).name,heightXX,heightYY);
             
             if i == 0
@@ -359,7 +379,7 @@ for movie_itr = 6: 8
                 disp(jet_growing_index)
             end
             
-            if growing==1 && save_grow < 6
+            if growing==1 && save_grow < 10
                 if increaseHight>20
                     ii = ii + 1;
 %                     prefix = strcat(prefix_1,prefix_14,prefix_15,prefix_10,prefix_11,prefix_6,...
@@ -374,7 +394,7 @@ for movie_itr = 6: 8
                 save_grow = save_grow + 1;
                 continue
             end
-            if  growing==1 && save_grow == 6
+            if  growing==1 && save_grow == 10
                 fprintf('%s to %s are jet growing\n', img_dir(jet_growing_index).name,img_dir(ii).name);
                 disp('---------------')
                 diary 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\profileVelocity\jetVelocities'
@@ -382,11 +402,7 @@ for movie_itr = 6: 8
 %             saved jet vel
 %             saved jet vel
 
-% find max height
-% find max height
 
-% saved max height
-% saved max height
   
             filename_out = strcat(filename,ext_out);
             fid = fopen(filename_out,'w');
@@ -398,6 +414,11 @@ for movie_itr = 6: 8
         end
         continue
     end
+    
+    fid = fopen(maxHeightfile,'a');
+    fprintf(fid,'%s',[img_dir.folder]);
+    fprintf(fid, '\t %d\n',maxHeightYY]); %relative to flat surface
+    fclose(fid);
     cd ..
 
 end
