@@ -237,7 +237,7 @@ for movie_itr = 131:154
                     continue
                 end
                 
-                if (radii<30)
+                if (radii<25)
                     msg='radius of droplet are too small';
                     error(msg)
                 elseif (radii>115)
@@ -273,7 +273,7 @@ for movie_itr = 131:154
 %         end
         
         
-        if max(boundary(:,1))> level && ii < ref_index - totalNumber -skipped + 1 -40
+        if max(boundary(:,1))> level && ii < ref_index - totalNumber -skipped + 1 -18
             
 %             figure(3); imshow(a1);
 %             hold on
