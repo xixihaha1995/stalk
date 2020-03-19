@@ -21,7 +21,7 @@ levelDir = 'C:\Users\lab-admin\Desktop\Lichen_Wu\movies_leveled\';
 level_out = strcat(levelDir,'level',extlevel_out);
 
 outDir = 'C:\Users\lab-admin\Desktop\Lichen_Wu\movies_circled\';
-filename_out = strcat(outDir,'circled',ext_out);
+filename_out_cir = strcat(outDir,'circled',ext_out);
 
 outDir_prof = 'C:\Users\lab-admin\Desktop\Lichen_Wu\movies_profiled\';
 filename_out_prof = strcat(outDir_prof,'JetVel',ext_out);
@@ -60,6 +60,7 @@ for movie_itr = 131:154
     y1 = Impact_location-500;
 
     figure(1);
+    title(ref_file);
     set(gcf,'WindowState','maximized');
 
     plot(smooth(double((ref_a(:, Impact_location-500)))),'r');
@@ -119,10 +120,12 @@ for movie_itr = 131:154
         if impact_saved==0 && impact_index == ii || contains(filenameImpact,'.bmp') == 0 ||...
                 contains(filenameImpact,'.txt')
             impact_index = impact_index-1;
+            filenameImpact=img_dir(impact_index).name;
             continue
         end
         if impact_saved==0
             figure();
+            title(img_dir(impact_index).name);
             imshow(img_dir(impact_index).name);
             set(gcf,'WindowState','maximized');
             [impact_index_xx,impact_index_yy] = ginput(1);
@@ -219,7 +222,7 @@ for movie_itr = 131:154
                     %         end
                     orientation = stats.Orientation(1);
 
-                    fid = fopen(filename_out,'a');
+                    fid = fopen(filename_out_cir,'a');
                     
                     fprintf(fid,'%s',[img_dir(ii).name]);
                     fprintf(fid, '\t  %d \t  %d \t  %d \t  %d \t  %d \t  %d \t  %8.2f \t %8.2f \t %s\t %8.2f \t %d\n',...
@@ -238,7 +241,7 @@ for movie_itr = 131:154
                     error(msg)
                 end
 
-                fid = fopen(filename_out,'a');
+                fid = fopen(filename_out_cir,'a');
                 
                 fprintf(fid,'%s',[img_dir(ii).name]);
                 fprintf(fid, '\t %d \t  %d \t  %d \t  %d \t  %d \t  %d \t %8.2f \t %8.2f \t %8.2f\n',...
@@ -268,17 +271,17 @@ for movie_itr = 131:154
         
         if max(boundary(:,1))> level && ii < ref_index - totalNumber -skipped + 1 -40
             
-            figure(3); imshow(a1);
-            hold on
+%             figure(3); imshow(a1);
+%             hold on
             for k1=1:kk
                 boundary = B{K_I(k1)};
                 plot(boundary(:,2), boundary(:,1),'r');
                 text(boundary(int16(K_M(k1)/2), 2), boundary(int16(K_M(k1)/2),1), num2str(k1),'Color','green','FontSize',24);
             end 
-            plt=plot([y1 y2], [x1 x2], 'm', 'LineWidth', 2);
-
-            hold off
-            close
+%             plt=plot([y1 y2], [x1 x2], 'm', 'LineWidth', 2);
+% 
+%             hold off
+%             close
 
 
             profl = B{K_I(1)};
