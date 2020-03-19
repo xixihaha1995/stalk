@@ -33,8 +33,7 @@ maxHeightfile = strcat(maxHeightfile_Dir,'maxHeight',ext_out);
 left_saved=0;
 right_saved=0;
 
-maxHeightYY=1500;
-maxH_index =1;
+
 
 
 for movie_itr = 82:105
@@ -101,6 +100,8 @@ for movie_itr = 82:105
     getAssumingImpact=0;
     save_grow = 0;
     growing = 0;
+    maxHeightYY=1500;
+    maxH_index =1;
    
     
     fid = fopen(level_out,'a');
@@ -318,7 +319,7 @@ for movie_itr = 82:105
 
             figure(4); imshow(a);
             hold on
-            plot(x_temp, y_temp, 'r');
+%             plot(x_temp, y_temp, 'r');
             %hold off
 
             % alpha = 0; %The flat surface has aero angle in image 
@@ -461,10 +462,12 @@ for movie_itr = 82:105
         [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY]); %relative to flat surface
     fclose(fid);
     fprintf('maxHeight=%d\n',maxHeightYY);
-    disp('---------------')
-    diary 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_diary'
+    disp('------same run imgs processed---------')
     cd(directory);
 end
+
+disp('------same ndl imgs processed---------')
+diary 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_diary'
     
     
 
