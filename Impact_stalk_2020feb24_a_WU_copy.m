@@ -405,8 +405,8 @@ for movie_itr = 131:154
                 
                 fid = fopen(filename_out_prof,'a');
                 fprintf(fid,'%s',[img_dir(ii).name]);
-                fprintf(fid, '\t %d \t  %d \t  %d \t  %d \t  %d \t  %d \t  %d \t %8.2f\n',...
-                    [c(1);c(2);c(3);c(4);c(5);c(6);heightXX;heightYY]); %relative to flat surface
+                fprintf(fid, '\t %d \t  %d \t  %d \t  %d \t  %d \t  %d \t  %d \t %d \t %8.2f\n',...
+                    [c(1);c(2);c(3);c(4);c(5);c(6);heightXX;heightYY;increaseHight]); %relative to flat surface
                 fclose(fid);
                 save_grow = save_grow + 1;
                 continue
