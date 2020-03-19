@@ -37,12 +37,28 @@ maxHeightYY=1500;
 maxH_index =1;
 
 
-for movie_itr = 141:141
+for movie_itr = 141:154
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
-    img_dir=dir(strcat(movie_dir(movie_itr).folder,'\',movie_dir(movie_itr).name));
+%     img_dir_tem=dir(strcat(movie_dir(movie_itr).folder,'\',movie_dir(movie_itr).name));
+    bmptable = dir('*.bmp');
+%         how to reverse iterate
+    tableImgDir = struct2table(bmptable);
+    sortedT = sortrows(tableImgDir,3,'descend');
+    img_dir = table2struct(sortedT);
+%     reverse all files via created time
+    
+    if contains(img_dir(3).name,'-')==0
+        sortedT = sortrows(tableImgDir,1,'descend');
+        img_dir = table2struct(sortedT);
+    end
+%     reverse all files via filename        
+
+
     [ref_index,ref_indexUseless] = size(img_dir);
-    ref_index = ref_index -1;
+%     ref_index = ref_index -1;
+    
+        
     FirstIm = ref_index - 40;
     
     ref_file = strcat(img_dir(ref_index).name);

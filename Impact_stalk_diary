@@ -1999,3 +1999,127 @@ Click on the middle pick in red line once: ?
 Click on the middle pick in green line once: ?
 Total 14 images have been processed, 13 have been circled, 1 have been centroided.
 ------
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Impact_stalk_2020feb24_a_WU_copy', 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m', 242)" style="font-weight:bold">Impact_stalk_2020feb24_a_WU_copy</a> (<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',242,0)">line 242</a>)
+radius of droplet are too small
+} 
+opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',242,0)
+img_dir(ref_index).name
+
+ans =
+
+    '20200109_ndl22_ht5_r3_-0389.bmp'
+
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3           19           14           36        4.994
+
+<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',43,1)">43  </a>    img_dir=dir(strcat(movie_dir(movie_itr).folder,'\',movie_dir(movie_itr).name));
+if system_dependent('IsDebugMode')==1, dbstep; end
+img_dir_new = sortrows(img_dir,descend);
+{Unrecognized function or variable 'descend'.
+} 
+img_dir_new = sortrows(img_dir,'descend');
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sort')" style="font-weight:bold">sort</a>
+Undefined function 'sort' for input arguments of type 'struct'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sortrows>sortBackToFront', 'C:\Program Files\MATLAB\R2019b\toolbox\matlab\datafun\sortrows.m', 119)" style="font-weight:bold">sortrows>sortBackToFront</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2019b\toolbox\matlab\datafun\sortrows.m',119,0)">line 119</a>)
+    [~,ind] = sort(A(I,abs(ck)),directions{(ck < 0) + 1},opts{:});
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sortrows', 'C:\Program Files\MATLAB\R2019b\toolbox\matlab\datafun\sortrows.m', 73)" style="font-weight:bold">sortrows</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2019b\toolbox\matlab\datafun\sortrows.m',73,0)">line 73</a>)
+            I = sortBackToFront(A, col, nanflag, compareflag);
+} 
+t= struct2table(img_dir);
+sorted = sortrows(t,'descend');
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('tabular/sortrows', 'C:\Program Files\MATLAB\R2019b\toolbox\matlab\datatypes\@tabular\sortrows.m', 57)" style="font-weight:bold">tabular/sortrows</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2019b\toolbox\matlab\datatypes\@tabular\sortrows.m',57,0)">line 57</a>)
+Unrecognized table variable name 'descend'.
+} 
+sorted = sortrows(t,1,'descend');
+sortedS = table2struct(sorted);
+movie_dir(movie_itr).name
+
+ans =
+
+    '20200109_ndl22_hgt3_r2'
+
+img_dir(3).name
+
+ans =
+
+    '20200109_ndl22_ht3_r2_00168.bmp'
+
+sorted = sortrows(t,3);
+sorted = sortrows(t,3,'descend');
+if system_dependent('IsDebugMode')==1, dbquit; end
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3           19           14           59       30.505
+
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+{Index in position 1 exceeds array bounds (must not exceed 89).
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Impact_stalk_2020feb24_a_WU_copy', 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m', 341)" style="font-weight:bold">Impact_stalk_2020feb24_a_WU_copy</a> (<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',341,0)">line 341</a>)
+            while (xxyy(impact_right_index,1)<impact_index_xx+60)
+} 
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3           19           15            0       55.254
+
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+{Index in position 1 exceeds array bounds (must not exceed 89).
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Impact_stalk_2020feb24_a_WU_copy', 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m', 341)" style="font-weight:bold">Impact_stalk_2020feb24_a_WU_copy</a> (<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',341,0)">line 341</a>)
+            while (xxyy(impact_right_index,1)<impact_index_xx+60)
+} 
+opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',341,0)
+impact_right_index
+
+impact_right_index =
+
+    90
+
+impact_index_xx+60
+
+ans =
+
+       1319.2
+
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3           19           15            6       18.665
+
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+Total 14 images have been processed, 1 have been circled, 13 have been centroided.
+------
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+Total 9 images have been processed, 8 have been circled, 1 have been centroided.
+------
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+Total 11 images have been processed, 10 have been circled, 1 have been centroided.
+------
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+Total 11 images have been processed, 10 have been circled, 1 have been centroided.
+------
+Stretch figure 1 horizontally for a better resolution..... 
+Click on the middle pick in red line once: ?
+ ... 
+Click on the middle pick in green line once: ?
+Total 11 images have been processed, 11 have been circled, 0 have been centroided.
+------
