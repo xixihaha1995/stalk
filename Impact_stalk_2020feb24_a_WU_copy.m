@@ -37,7 +37,7 @@ maxHeightYY=1500;
 maxH_index =1;
 
 
-for movie_itr = 131:154
+for movie_itr = 141:141
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
     img_dir=dir(strcat(movie_dir(movie_itr).folder,'\',movie_dir(movie_itr).name));
