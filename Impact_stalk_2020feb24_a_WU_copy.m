@@ -186,10 +186,9 @@ for movie_itr = 131:154
                 figure(2);
                 imshow(a);
                 hold on;
-
                 plot(boundary(:,2), boundary(:,1),'r');
                 hold off;
-                close
+
 
 
                 cenXX = mean(boundary(:,2));
@@ -371,7 +370,7 @@ for movie_itr = 131:154
 
 
             if heightYY< maxHeightYY
-                maxHeightYY = heightYY
+                maxHeightYY = heightYY;
             end
                 
 % saved max height
@@ -410,6 +409,7 @@ for movie_itr = 131:154
                 continue
             end
             if  growing==1 && save_grow == 10
+                growing=2;
                 fprintf('%s to %s are jet growing\n', img_dir(jet_growing_index).name,img_dir(ii).name);
                 disp('---------------')
                 diary 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\profileVelocity\jetVelocities'
