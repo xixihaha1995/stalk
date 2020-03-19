@@ -60,12 +60,13 @@ for movie_itr = 131:154
     y1 = Impact_location-500;
 
     figure(1);
-    title(ref_file);
+    
     set(gcf,'WindowState','maximized');
 
     plot(smooth(double((ref_a(:, Impact_location-500)))),'r');
     hold on
     plot(smooth(double((ref_a(:, Impact_location+500)))), 'g');
+    title(ref_file)
     hold off
     disp('Stretch figure 1 horizontally for a better resolution..... ')
     disp('Click on the middle pick in red line once: ?')
@@ -125,9 +126,9 @@ for movie_itr = 131:154
         end
         if impact_saved==0
             figure();
-            title(img_dir(impact_index).name);
             imshow(img_dir(impact_index).name);
             set(gcf,'WindowState','maximized');
+            title(img_dir(impact_index).name)
             [impact_index_xx,impact_index_yy] = ginput(1);
             impact_saved = 1;
             close
@@ -182,12 +183,13 @@ for movie_itr = 131:154
             totalNumber = totalNumber + 1;
             
                 boundary = B{K_I(1)};
-%                 figure(2);
-%                 imshow(a);
-%                 hold on;
-% 
-%                 plot(boundary(:,2), boundary(:,1),'r');
-%                 hold off;
+                figure(2);
+                imshow(a);
+                hold on;
+
+                plot(boundary(:,2), boundary(:,1),'r');
+                hold off;
+                close
 
 
                 cenXX = mean(boundary(:,2));
@@ -275,8 +277,8 @@ for movie_itr = 131:154
 %             hold on
             for k1=1:kk
                 boundary = B{K_I(k1)};
-                plot(boundary(:,2), boundary(:,1),'r');
-                text(boundary(int16(K_M(k1)/2), 2), boundary(int16(K_M(k1)/2),1), num2str(k1),'Color','green','FontSize',24);
+%                 plot(boundary(:,2), boundary(:,1),'r');
+%                 text(boundary(int16(K_M(k1)/2), 2), boundary(int16(K_M(k1)/2),1), num2str(k1),'Color','green','FontSize',24);
             end 
 %             plt=plot([y1 y2], [x1 x2], 'm', 'LineWidth', 2);
 % 
