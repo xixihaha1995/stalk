@@ -438,6 +438,7 @@ for movie_itr = 131:154
     fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d\n',...
         [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY]); %relative to flat surface
     fclose(fid);
+    diary 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_diary'
     cd(directory);
 end
     
