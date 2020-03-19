@@ -295,7 +295,7 @@ for movie_itr = 82:105
         else
             possibleJetGrowIndex = ref_index - totalNumber -skipped + 1 -18;
         end
-        if max(boundary(:,1))> level && ii < ref_index - totalNumber -skipped + 1 -18
+        if max(boundary(:,1))> level && ii < possibleJetGrowIndex
             
 %             figure(3); imshow(a1);
 %             hold on
