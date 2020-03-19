@@ -29,8 +29,6 @@ filename_out_prof = strcat(outDir_prof,'JetVel',ext_out);
 maxHeightfile_Dir = 'C:\Users\lab-admin\Desktop\Lichen_Wu\movies_maxHeight\';
 maxHeightfile = strcat(maxHeightfile_Dir,'maxHeight',ext_out);
 
-growing = 0;
-save_grow = 0;
 
 left_saved=0;
 right_saved=0;
@@ -107,6 +105,11 @@ for movie_itr = 131:154
 
     
     for ii = size(img_dir):-1:3
+        
+        
+        growing = 0;
+        save_grow = 0;
+        
         filename = strcat(img_dir(ii).name);
 %         save impact index
 %         save impact index
@@ -390,7 +393,7 @@ for movie_itr = 131:154
             if increaseHight>12 && growing == 0 
                 jet_growing_index=ii;
                 growing =1;
-                disp(jet_growing_index)
+%                 disp(jet_growing_index)
             end
             
             if growing==1 && save_grow < 10
@@ -432,7 +435,8 @@ for movie_itr = 131:154
     
     fid = fopen(maxHeightfile,'a');
     fprintf(fid,'%s',[img_dir(ii).name]);
-    fprintf(fid, '\t %d \t  %d \t %d\n',[maxHeightYY;level;level-maxHeightYY]); %relative to flat surface
+    fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d\n',...
+        [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY]); %relative to flat surface
     fclose(fid);
     cd(directory);
 end
