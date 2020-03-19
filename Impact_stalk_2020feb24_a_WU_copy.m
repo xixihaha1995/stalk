@@ -37,7 +37,7 @@ maxHeightYY=1500;
 maxH_index =1;
 
 
-for movie_itr = 147:154
+for movie_itr = 82:105
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
     disp(movie_folder_name)
@@ -136,7 +136,7 @@ for movie_itr = 147:154
         if impact_saved ==0 && getAssumingImpact ==0;
             getAssumingImpact =1;
             [sizImg,tmpUseless]=size(img_dir);
-            impact_index=sizImg-100;
+            impact_index=round(sizImg/2);
             filenameImpact=img_dir(impact_index).name;
         end
         if impact_saved==0 && impact_index == ii || contains(filenameImpact,'.bmp') == 0 ||...
@@ -271,10 +271,11 @@ for movie_itr = 147:154
                 fclose(fid); 
                 continue
         end
-        if max(boundary(:,1))> level && ii == ref_index - totalNumber -skipped + 1
+        if max(boundary(:,1))> level && ii == ref_index - totalNumber -skipped 
             
             fprintf('Total %d images have been processed, %d have been circled, %d have been centroided.\n', ...
                 totalNumber, totalNumber - numCircledFailuer, numCircledFailuer);
+            fprintf('%s might start impacting\n', img_dir(ii).name);
             diary 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\circle_droplet\circleDiaryFile'
             continue
         end
@@ -288,8 +289,12 @@ for movie_itr = 147:154
 % % distance between impact and jet growing
 %             img_itr = ii - 50;
 %         end
-        
-        
+        pattern = ["ht0","ht1","ht2","ht3"];
+        if contains(img_dir(ii).name,pattern)
+            possibleJetGrowIndex = ref_index - totalNumber -skipped + 1 -40;
+        else
+            possibleJetGrowIndex = ref_index - totalNumber -skipped + 1 -18;
+        end
         if max(boundary(:,1))> level && ii < ref_index - totalNumber -skipped + 1 -18
             
 %             figure(3); imshow(a1);

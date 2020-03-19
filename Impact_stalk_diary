@@ -2222,3 +2222,155 @@ if system_dependent('IsDebugMode')==1, dbstep; end
 if system_dependent('IsDebugMode')==1, dbstep; end
 20200109_ndl22_ht5_r1_-0452.bmp to 20200109_ndl22_ht5_r1_-0442.bmp are jet growing
 if system_dependent('IsDebugMode')==1, dbcont; end
+20200109_ndl22_hgt5_r2
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',432,1)">432 </a>                growing=2;
+if system_dependent('IsDebugMode')==1, dbquit; end
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3           19           16            4       35.167
+
+20200109_ndl22_hgt5_r2
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+20200109_ndl22_ht5_r2_-0411.bmp to 20200109_ndl22_ht5_r2_-0402.bmp are jet growing
+20200109_ndl22_hgt5_r3
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ginput', 'C:\Program Files\MATLAB\R2019b\toolbox\matlab\uitools\ginput.m', 84)" style="font-weight:bold">ginput</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2019b\toolbox\matlab\uitools\ginput.m',84,0)">line 84</a>)
+Interrupted by figure deletion
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Impact_stalk_2020feb24_a_WU_copy', 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m', 88)" style="font-weight:bold">Impact_stalk_2020feb24_a_WU_copy</a> (<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',88,0)">line 88</a>)
+    [x1,y1g] = ginput(1);
+} 
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3           19           16            7       57.567
+
+20200109_ndl22_hgt5_r3
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',274,1)">274 </a>        if max(boundary(:,1))> level && ii == ref_index - totalNumber -skipped 
+ii
+
+ii =
+
+   111
+
+ref_index - totalNumber -skipped 
+
+ans =
+
+   111
+
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+if system_dependent('IsDebugMode')==1, dbstep; end
+Total 14 images have been processed, 14 have been circled, 0 have been centroided.
+if system_dependent('IsDebugMode')==1, dbquit; end
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3           19           16            9        2.409
+
+20200109_ndl22_hgt5_r3
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+Total 14 images have been processed, 14 have been circled, 0 have been centroided.
+20200109_ndl22_hgt6_r1
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+Total 20 images have been processed, 19 have been circled, 1 have been centroided.
+20200109_ndl22_hgt6_r2
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+Total 20 images have been processed, 19 have been circled, 1 have been centroided.
+20200109_ndl22_hgt6_r3
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+Total 20 images have been processed, 19 have been circled, 1 have been centroided.
+20200109_ndl22_hgt7_r1
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+{Array indices must be positive integers or logical values.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Impact_stalk_2020feb24_a_WU_copy', 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m', 140)" style="font-weight:bold">Impact_stalk_2020feb24_a_WU_copy</a> (<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',140,0)">line 140</a>)
+            filenameImpact=img_dir(impact_index).name;
+} 
+opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',140,0)
+img_dir(impact_index).name
+{Array indices must be positive integers or logical values.
+} 
+sizImg
+
+sizImg =
+
+    87
+
+round(sizImg/2)
+
+ans =
+
+    44
+
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3           19           16           18       29.319
+
+20200109_ndl22_hgt7_r1
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+Total 29 images have been processed, 29 have been circled, 0 have been centroided.
+{Unrecognized function or variable 'fprintg'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Impact_stalk_2020feb24_a_WU_copy', 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m', 278)" style="font-weight:bold">Impact_stalk_2020feb24_a_WU_copy</a> (<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',278,0)">line 278</a>)
+            fprintg('%s might start impacting', img_dir(ii+1).name);
+} 
+opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',278,0)
+ img_dir(ii+1).name
+
+ans =
+
+    '20200109_ndl22_ht7_r1_-0816.bmp'
+
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3           19           16           20       37.468
+
+20200109_ndl22_hgt7_r1
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+Total 29 images have been processed, 29 have been circled, 0 have been centroided.
+20200109_ndl22_ht7_r1_-0815.bmp might start impacting
+20200109_ndl22_hgt7_r2
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+Total 29 images have been processed, 29 have been circled, 0 have been centroided.
+20200109_ndl22_ht7_r2_-0471.bmp might start impacting
+20200109_ndl22_hgt7_r3
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+Total 29 images have been processed, 29 have been circled, 0 have been centroided.
+20200109_ndl22_ht7_r3_-0474.bmp might start impacting
+Impact_stalk_2020feb24_a_WU_copy
+         2020            3           19           16           28       46.111
+
+20200109_ndl14_hgt0_r1
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+Total 7 images have been processed, 2 have been circled, 5 have been centroided.
+20200109_ndl14_ht0_r1_-0644.bmp might start impacting
+20200109_ndl14_hgt0_r2
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+Total 7 images have been processed, 7 have been circled, 0 have been centroided.
+20200109_ndl14_ht0_r2_-0528.bmp might start impacting
