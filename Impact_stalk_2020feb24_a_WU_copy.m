@@ -38,7 +38,8 @@ right_saved=0;
 maxHeightYY=1500;
 maxH_index =1;
 
-for movie_itr = 6: 8
+
+for movie_itr = 131:154
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
     img_dir=dir(strcat(movie_dir(movie_itr).folder,'\',movie_dir(movie_itr).name));
@@ -71,6 +72,8 @@ for movie_itr = 6: 8
     disp(' ... ')
     disp('Click on the middle pick in green line once: ?')
     [x2,y2g] = ginput(1);
+    
+    close
     
     level = (x1 + x2)/2; 
     numCircledFailuer = 0;
@@ -124,6 +127,7 @@ for movie_itr = 6: 8
             set(gcf,'WindowState','maximized');
             [impact_index_xx,impact_index_yy] = ginput(1);
             impact_saved = 1;
+            close
         end
             
 
@@ -175,12 +179,12 @@ for movie_itr = 6: 8
             totalNumber = totalNumber + 1;
             
                 boundary = B{K_I(1)};
-                figure(2);
-                imshow(a);
-                hold on;
-
-                plot(boundary(:,2), boundary(:,1),'r');
-                hold off;
+%                 figure(2);
+%                 imshow(a);
+%                 hold on;
+% 
+%                 plot(boundary(:,2), boundary(:,1),'r');
+%                 hold off;
 
 
                 cenXX = mean(boundary(:,2));
@@ -274,6 +278,7 @@ for movie_itr = 6: 8
             plt=plot([y1 y2], [x1 x2], 'm', 'LineWidth', 2);
 
             hold off
+            close
 
 
             profl = B{K_I(1)};
@@ -424,8 +429,7 @@ for movie_itr = 6: 8
     fprintf(fid,'%s',[img_dir(ii).name]);
     fprintf(fid, '\t %d \t  %d \t %d\n',[maxHeightYY;level;level-maxHeightYY]); %relative to flat surface
     fclose(fid);
-    cd ..
-
+    cd(directory);
 end
     
     
