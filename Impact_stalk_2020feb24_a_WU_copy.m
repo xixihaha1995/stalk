@@ -356,7 +356,7 @@ for movie_itr = 6: 8
 
 
             if heightYY< maxHeightYY
-                maxHeightYY = heightYY;
+                maxHeightYY = heightYY
             end
                 
 % saved max height
@@ -417,7 +417,7 @@ for movie_itr = 6: 8
     
     fid = fopen(maxHeightfile,'a');
     fprintf(fid,'%s',[img_dir.folder]);
-    fprintf(fid, '\t %d\n',[maxHeightYY]); %relative to flat surface
+    fprintf(fid, '\t %d  \t %d\n',[maxHeightYY;level]); %relative to flat surface
     fclose(fid);
     cd ..
 
