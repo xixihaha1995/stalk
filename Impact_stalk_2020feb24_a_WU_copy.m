@@ -397,11 +397,11 @@ for movie_itr = 131:154
             end
             
             if growing==1 && save_grow < 10
-                if increaseHight>20
-                    ii = ii + 1;
-%                     prefix = strcat(prefix_1,prefix_14,prefix_15,prefix_10,prefix_11,prefix_6,...
-%                         prefix_7,prefix_2,prefix_3,prefix_12,prefix_13,prefix_8,prefix_9,prefix_4,prefix_5,num2str(ii, '%05g'),ext);
-                end
+%                 if increaseHight>20
+%                     ii = ii + 1;
+% %                     prefix = strcat(prefix_1,prefix_14,prefix_15,prefix_10,prefix_11,prefix_6,...
+% %                         prefix_7,prefix_2,prefix_3,prefix_12,prefix_13,prefix_8,prefix_9,prefix_4,prefix_5,num2str(ii, '%05g'),ext);
+%                 end
                 
                 fid = fopen(filename_out_prof,'a');
                 fprintf(fid,'%s',[img_dir(ii).name]);
