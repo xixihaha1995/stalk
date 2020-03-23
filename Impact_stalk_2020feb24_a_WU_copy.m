@@ -36,7 +36,7 @@ right_saved=0;
 
 
 
-for movie_itr = 82:105
+for movie_itr = 181:207
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
     disp(movie_folder_name)
@@ -277,7 +277,7 @@ for movie_itr = 82:105
             fprintf('Total %d images have been processed, %d have been circled, %d have been centroided.\n', ...
                 totalNumber, totalNumber - numCircledFailuer, numCircledFailuer);
             fprintf('%s might start impacting\n', img_dir(ii).name);
-            diary 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\circle_droplet\circleDiaryFile'
+%             diary 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\circle_droplet\circleDiaryFile'
             continue
         end
             
