@@ -36,7 +36,7 @@ right_saved=0;
 
 
 
-for movie_itr = 241:258
+for movie_itr = 258:258
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
     disp(movie_folder_name)
@@ -416,7 +416,7 @@ for movie_itr = 241:258
                 heightYY_old = heightYY;
                 %         disp(heightYY_old)
             end
-            if increaseHight>12 && growing == 0 
+            if increaseHight>6 && growing == 0 
                 jet_growing_index=ii;
                 growing =1;
 %                 disp(jet_growing_index)
