@@ -36,7 +36,7 @@ right_saved=0;
 
 
 
-for movie_itr = 240:240
+for movie_itr = 241:258
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
     disp(movie_folder_name)
@@ -190,7 +190,7 @@ for movie_itr = 240:240
         boundary_size = zeros(1, length(B));
         for k=1:length(B)       
             boundary_size(k)= length(B{k});
-            if boundary_size(k) >150 %count boundaries with points greater than 200
+            if boundary_size(k) >200 %count boundaries with points greater than 200
                  kk = kk+1;
             end
         end
