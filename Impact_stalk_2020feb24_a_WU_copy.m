@@ -36,7 +36,7 @@ right_saved=0;
 
 
 
-for movie_itr = 181:207
+for movie_itr = 240:240
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
     disp(movie_folder_name)
@@ -190,7 +190,7 @@ for movie_itr = 181:207
         boundary_size = zeros(1, length(B));
         for k=1:length(B)       
             boundary_size(k)= length(B{k});
-            if boundary_size(k) >200 %count boundaries with points greater than 200
+            if boundary_size(k) >150 %count boundaries with points greater than 200
                  kk = kk+1;
             end
         end
@@ -352,9 +352,12 @@ for movie_itr = 181:207
             while (xxyy(impact_left_index,1)<impact_index_xx-60)
                 impact_left_index = impact_left_index +1;
             end
-
+            [siz_inde,useless] = size(xxyy);
             while (xxyy(impact_right_index,1)<impact_index_xx+60) 
                 impact_right_index = impact_right_index +1;
+                if impact_right_index ==siz_inde
+                    break
+                end
             end
 % saved impact location
 % saved impact location
