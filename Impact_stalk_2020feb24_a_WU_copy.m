@@ -36,7 +36,7 @@ right_saved=0;
 
 
 
-for movie_itr = 30:56
+for movie_itr = 43:56
     
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
@@ -48,15 +48,16 @@ for movie_itr = 30:56
     sortedT = sortrows(tableImgDir,3,'descend');
     img_dir = table2struct(sortedT);
 %     reverse all files via created time
+    [ref_index,ref_indexUseless] = size(img_dir);
     
-    if contains(img_dir(3).name,'-')==0
+    if contains(img_dir(ref_index).name,'-')==0
         sortedT = sortrows(tableImgDir,1,'descend');
         img_dir = table2struct(sortedT);
     end
 %     reverse all files via filename        
 
 
-    [ref_index,ref_indexUseless] = size(img_dir);
+%     [ref_index,ref_indexUseless] = size(img_dir);
 %     ref_index = ref_index -1;
     
         
