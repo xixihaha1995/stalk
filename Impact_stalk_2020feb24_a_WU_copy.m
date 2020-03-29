@@ -36,7 +36,8 @@ right_saved=0;
 
 
 
-for movie_itr = 258:258
+for movie_itr = 30:56
+    
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
     disp(movie_folder_name)
@@ -205,11 +206,11 @@ for movie_itr = 258:258
             totalNumber = totalNumber + 1;
             
                 boundary = B{K_I(1)};
-                figure(2);
-                imshow(a);
-                hold on;
-                plot(boundary(:,2), boundary(:,1),'r');
-                hold off;
+%                 figure(2);
+%                 imshow(a);
+%                 hold on;
+%                 plot(boundary(:,2), boundary(:,1),'r');
+%                 hold off;
 
 
 
@@ -224,6 +225,8 @@ for movie_itr = 258:258
                     [centers,radii] = imfindcircles(BW,[28 50],'ObjectPolarity','bright');
                 elseif contains(filenameImpact,'ndl14')
                     [centers,radii] = imfindcircles(BW,[38 65],'ObjectPolarity','bright');
+                elseif contains(filenameImpact,'ndl18')
+                    [centers,radii] = imfindcircles(BW,[32 55],'ObjectPolarity','bright');
                 end
                     
                     
@@ -416,7 +419,7 @@ for movie_itr = 258:258
                 heightYY_old = heightYY;
                 %         disp(heightYY_old)
             end
-            if increaseHight>6 && growing == 0 
+            if increaseHight>12 && growing == 0 
                 jet_growing_index=ii;
                 growing =1;
 %                 disp(jet_growing_index)
