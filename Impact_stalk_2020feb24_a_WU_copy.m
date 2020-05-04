@@ -179,6 +179,8 @@ for movie_itr = 275:275
 
             
         a = imread(filename);
+       
+        a = imcrop(a,[0 0 2560 level]);
         
 % subtract the background
         a0 =ref_a-a; 
@@ -317,6 +319,7 @@ for movie_itr = 275:275
 
 
             profl = B{K_I(1)};
+%             atwo = polyarea(profl(:,2), profl(:,1));
             [min_x, I_min]=min(profl(:,2)); %In the horizontal direction
             [max_x, I_max]=max(profl(:,2));
             x_temp = profl(I_min:I_max, 2)';
