@@ -36,7 +36,7 @@ right_saved=0;
 
 
 
-for movie_itr = 43:56
+for movie_itr = 275:275
     
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
@@ -103,6 +103,7 @@ for movie_itr = 43:56
     save_grow = 0;
     growing = 0;
     maxHeightYY=1500;
+    maxHeightYYName = 0;
     maxH_index =1;
    
     
@@ -404,6 +405,9 @@ for movie_itr = 43:56
 
             if heightYY< maxHeightYY
                 maxHeightYY = heightYY;
+                maxHeightYYName = img_dir(ii).name;
+                imwrite(BW,'testMaxImage.bmp');
+              
             end
                 
 % saved max height
@@ -420,7 +424,7 @@ for movie_itr = 43:56
                 heightYY_old = heightYY;
                 %         disp(heightYY_old)
             end
-            if increaseHight>12 && growing == 0 
+            if increaseHight>7 && growing == 0 
                 jet_growing_index=ii;
                 growing =1;
 %                 disp(jet_growing_index)
@@ -464,7 +468,7 @@ for movie_itr = 43:56
     end
     
     fid = fopen(maxHeightfile,'a');
-    fprintf(fid,'%s',[img_dir(ii).name]);
+    fprintf(fid,'%s',[maxHeightYYName]);
     fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d\n',...
         [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY]); %relative to flat surface
     fclose(fid);
