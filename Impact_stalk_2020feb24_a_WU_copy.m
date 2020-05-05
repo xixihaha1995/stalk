@@ -483,14 +483,14 @@ for movie_itr = 6:81
 %     circle the maxHeight img
     
     a = imread(maxHeightYYName);
-    a = imcrop(a,[0 0 2560 level+3]);
-    ref_a=imcrop(ref_a,[0 0 2560 level+3]);
+    a = imcrop(a,[impact_index_xx-80 maxHeightYY  150 150]);
+    ref_a=imcrop(ref_a,[impact_index_xx-80 maxHeightYY  150 150]);
     a0 =ref_a-a; 
     a0_max = double(max(max(a0)))/256.0;
     a1 = imadjust(a0, [0.01 a0_max], [0 1]); %for a better contrast
     BW = a0>max(max(a0))/5; %another way to convert into BW 
     imshow(BW)
-    [centers,radiiMax] = imfindcircles(BW,[minRa maxRa],'ObjectPolarity','bright');
+    [centers,radiiMax] = imfindcircles(BW,[28 65],'ObjectPolarity','bright');
     viscircles(centers,radiiMax);
 %     circle the maxHeight img
 %     circle the maxHeight img
@@ -499,17 +499,17 @@ for movie_itr = 6:81
     fprintf(fid,'%s\t',[impactingName]);
     if exist('jet_growing_index','var') == 1
         fprintf(fid,'%s\t',[img_dir(jet_growing_index).name]);
+    else
+        fprintf(fid,'no Growing Detected');
     end 
     fprintf(fid,'%s',[maxHeightYYName]);
-    if exist('radiiMax','var') == 1
-        fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d \t  %d \t %d \t %d\n',...
-            [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY;...
-            discreteIntegration;discreteIntegration/maxHeightYY;radiiMax*2]); %relative to flat surface
-    else 
-        fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d \t  %d \t  %d\n',...
-            [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY;...
-            discreteIntegration;discreteIntegration/maxHeightYY]); %relative to flat surface
+    if exist('radiiMax','var') == 0
+        radiiMax = 0; 
     end
+    fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d \t  %d \t %d \t  %d\n',...
+        [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY;...
+        discreteIntegration;discreteIntegration/maxHeightYY;radiiMax]); %relative to flat surface
+    
     fclose(fid);
     fprintf('maxHeight=%d\n',maxHeightYY);
     disp('------same run imgs processed---------')
