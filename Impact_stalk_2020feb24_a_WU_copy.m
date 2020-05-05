@@ -45,13 +45,13 @@ for movie_itr = 275:275
     bmptable = dir('*.bmp');
 %         how to reverse iterate
     tableImgDir = struct2table(bmptable);
-    sortedT = sortrows(tableImgDir,1,'descend');
+    sortedT = sortrows(tableImgDir,3,'descend');
     img_dir = table2struct(sortedT);
 %     reverse all files via created time
     [ref_index,ref_indexUseless] = size(img_dir);
     
     if contains(img_dir(ref_index).name,'-')==0
-        sortedT = sortrows(tableImgDir,1,'descend');
+        sortedT = sortrows(tableImgDir,1,'ascend');
         img_dir = table2struct(sortedT);
     end
 %     reverse all files via filename        
@@ -180,8 +180,8 @@ for movie_itr = 275:275
             
         a = imread(filename);
        
-%         a = imcrop(a,[0 0 2560 level]);
-%         ref_a=imcrop(ref_a,[0 0 2560 level]);
+        a = imcrop(a,[0 0 2560 level]);
+        ref_a=imcrop(ref_a,[0 0 2560 level]);
         
 % subtract the background
         a0 =ref_a-a; 
@@ -284,6 +284,7 @@ for movie_itr = 275:275
             
             fprintf('Total %d images have been processed, %d have been circled, %d have been centroided.\n', ...
                 totalNumber, totalNumber - numCircledFailuer, numCircledFailuer);
+            impactingName = img_dir(ii).name;
             fprintf('%s might start impacting\n', img_dir(ii).name);
 %             diary 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\circle_droplet\circleDiaryFile'
             continue
@@ -410,7 +411,7 @@ for movie_itr = 275:275
             if heightYY< maxHeightYY
                 maxHeightYY = heightYY;
                 maxHeightYYName = img_dir(ii).name;
-                imwrite(BW,'testMaxImage.bmp');
+%                 imwrite(BW,'testMaxImage.bmp');
               
             end
                 
@@ -472,6 +473,8 @@ for movie_itr = 275:275
     end
     
     fid = fopen(maxHeightfile,'a');
+    fprintf(fid,'%s',[impactingName]);
+    fprintf(fid,'%s',[img_dir(jet_growing_index).name]);
     fprintf(fid,'%s',[maxHeightYYName]);
     fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d \t  %d \t %d\n',...
         [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY;...
