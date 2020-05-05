@@ -483,8 +483,8 @@ for movie_itr = 6:81
 %     circle the maxHeight img
     
     a = imread(maxHeightYYName);
-    a = imcrop(a,[impact_index_xx-80 maxHeightYY  150 150]);
-    ref_a=imcrop(ref_a,[impact_index_xx-80 maxHeightYY  150 150]);
+    a = imcrop(a,[impact_index_xx-80 maxHeightYY  200 150]);
+    ref_a=imcrop(ref_a,[impact_index_xx-80 maxHeightYY  200 150]);
     a0 =ref_a-a; 
     a0_max = double(max(max(a0)))/256.0;
     a1 = imadjust(a0, [0.01 a0_max], [0 1]); %for a better contrast
