@@ -93,7 +93,7 @@ for movie_itr = 6:81
     close
     
     level = (x1 + x2)/2; 
-    level=level-12;
+    level=level;
     numCircledFailuer = 0;
     totalNumber = 0;
     skipped = 0;
@@ -347,6 +347,9 @@ for movie_itr = 6:81
 
             plot(profile_x+y1, profile_y+x1, 'y')
             hold off
+            
+            keyboard
+            
 %             find the jetVel
 %             find the jetVel
 
@@ -496,23 +499,22 @@ for movie_itr = 6:81
     if(siz(1) ~= 1)
         stats = regionprops('table',BW,'Centroid',...
         'MajorAxisLength','MinorAxisLength','Orientation','BoundingBox');
-        stats = sortrows(stats,2,'descend');
+        stats = sortrows(stats,3,'descend');
         centers = stats.Centroid;
         %         centers = centers(1,:);
         majorAxisLength = stats.MajorAxisLength(1);
         minorAxisLength =stats.MinorAxisLength(1);
         boundingBox = stats.BoundingBox(1,:);
-        rectangle('Position', boundingBox)
+        rectangle('Position', boundingBox, 'LineWidth', 2, 'EdgeColor', 'r')
         boundingBoxWidth = boundingBox(1,3);
     else
         majorAxisLength=radiiMax * 2 ;
         minorAxisLength=0;
         boundingBoxWidth=0;
-        
+        viscircles(centers,radiiMax);
     end
     keyboard
 %     dbcont to continue
-    viscircles(centers,radiiMax);
     
 %     circle the maxHeight img
 %     circle the maxHeight img
