@@ -228,10 +228,16 @@ for movie_itr = 275:275
                 end
                 if contains(filenameImpact,'ndl22')
                     [centers,radii] = imfindcircles(BW,[28 50],'ObjectPolarity','bright');
+                    minRa=28;
+                    maxRa=50;
                 elseif contains(filenameImpact,'ndl14')
                     [centers,radii] = imfindcircles(BW,[38 65],'ObjectPolarity','bright');
+                    minRa=38;
+                    maxRa=65;
                 elseif contains(filenameImpact,'ndl18')
                     [centers,radii] = imfindcircles(BW,[32 55],'ObjectPolarity','bright');
+                    minRa=32;
+                    maxRa=55;
                 end
                     
                     
@@ -412,7 +418,6 @@ for movie_itr = 275:275
                 maxHeightYY = heightYY;
                 maxHeightYYName = img_dir(ii).name;
 %                 imwrite(BW,'testMaxImage.bmp');
-              
             end
                 
 % saved max height
@@ -471,14 +476,29 @@ for movie_itr = 275:275
         end
         continue
     end
+%     circle the maxHeight img
+%     circle the maxHeight img
+    a = imread(maxHeightYYName);
+    a = imcrop(a,[0 0 2560 level]);
+    ref_a=imcrop(ref_a,[0 0 2560 level]);
+    a0 =ref_a-a; 
+    a0_max = double(max(max(a0)))/256.0;
+    a1 = imadjust(a0, [0.01 a0_max], [0 1]); %for a better contrast
+    BW = a0>max(max(a0))/5; %another way to convert into BW 
+    imshow(BW)
+    [centers,radiiMax] = imfindcircles(BW,[minRa maxRa],'ObjectPolarity','bright');
+    viscircles(centers,radiiMax);
+%     circle the maxHeight img
+%     circle the maxHeight img
+        
     
     fid = fopen(maxHeightfile,'a');
     fprintf(fid,'%s',[impactingName]);
     fprintf(fid,'%s',[img_dir(jet_growing_index).name]);
     fprintf(fid,'%s',[maxHeightYYName]);
-    fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d \t  %d \t %d\n',...
+    fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d \t  %d \t %d \t %d\n',...
         [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY;...
-        discreteIntegration;discreteIntegration/maxHeightYY]); %relative to flat surface
+        discreteIntegration;discreteIntegration/maxHeightYY;radiiMax]); %relative to flat surface
     fclose(fid);
     fprintf('maxHeight=%d\n',maxHeightYY);
     disp('------same run imgs processed---------')
