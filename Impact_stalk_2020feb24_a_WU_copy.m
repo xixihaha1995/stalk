@@ -496,8 +496,8 @@ for movie_itr = 3:81
 %     circle the maxHeight img
     
     fid = fopen(maxHeightfile,'a');
-    if exist('jet_growing_index','var') == 1 && exist('impactingName','var') == 1
-        fprintf(fid,'%s\t',[impactingName]);
+    fprintf(fid,'%s\t',[impactingName]);
+    if exist('jet_growing_index','var') == 1
         fprintf(fid,'%s\t',[img_dir(jet_growing_index).name]);
     else 
         fprintf(fid,'%s',[maxHeightYYName]);
