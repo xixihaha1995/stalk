@@ -181,6 +181,7 @@ for movie_itr = 275:275
         a = imread(filename);
        
         a = imcrop(a,[0 0 2560 level]);
+        ref_a=imcrop(ref_a,[0 0 2560 level]);
         
 % subtract the background
         a0 =ref_a-a; 
@@ -210,11 +211,11 @@ for movie_itr = 275:275
             totalNumber = totalNumber + 1;
             
                 boundary = B{K_I(1)};
-%                 figure(2);
-%                 imshow(a);
-%                 hold on;
-%                 plot(boundary(:,2), boundary(:,1),'r');
-%                 hold off;
+                figure(2);
+                imshow(a);
+                hold on;
+                plot(boundary(:,2), boundary(:,1),'r');
+                hold off;
 
 
 
@@ -319,7 +320,7 @@ for movie_itr = 275:275
 
 
             profl = B{K_I(1)};
-%             atwo = polyarea(profl(:,2), profl(:,1));
+            discreteIntegration = polyarea(profl(:,2), profl(:,1));
             [min_x, I_min]=min(profl(:,2)); %In the horizontal direction
             [max_x, I_max]=max(profl(:,2));
             x_temp = profl(I_min:I_max, 2)';
@@ -472,8 +473,9 @@ for movie_itr = 275:275
     
     fid = fopen(maxHeightfile,'a');
     fprintf(fid,'%s',[maxHeightYYName]);
-    fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d\n',...
-        [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY]); %relative to flat surface
+    fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d \t  %d \t %d\n',...
+        [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY;...
+        discreteIntegration;discreteIntegration/maxHeightYY]); %relative to flat surface
     fclose(fid);
     fprintf('maxHeight=%d\n',maxHeightYY);
     disp('------same run imgs processed---------')

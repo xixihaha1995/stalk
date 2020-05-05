@@ -2685,3 +2685,83 @@ readAndPlotText_Wu_20200223
 
 currentNdl: {Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('readAndPlotText_Wu_20200223', 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\profileVelocity\readAndPlotText_Wu_20200223.m', 29)" style="font-weight:bold">readAndPlotText_Wu_20200223</a> (<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\profileVelocity\readAndPlotText_Wu_20200223.m',29,0)">line 29</a>)
 } 
+plot(profl(:,2), profl(:,1), 'r');
+plot(profl(:,1), profl(:,2), 'r');
+[k,v]=boundary(profl(:,2), profl(:,1));
+{Insufficient number of outputs from right hand side of equal sign to satisfy assignment.
+} 
+plot(profl(:,1), profl(:,2), 'r');
+plot(profl(:,2), profl(:,1), 'r');
+area(profl(:,2), profl(:,1));
+areaTemp=area(profl(:,2), profl(:,1));
+atwo = polyarea(profl(:,2), profl(:,1));
+Impact_stalk_2020feb24_a_WU_copy
+         2020            5            4           19           39       11.132
+
+20200116_ndl18_hgt4_r1
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ginput', 'C:\Program Files\MATLAB\R2019b\toolbox\matlab\uitools\ginput.m', 84)" style="font-weight:bold">ginput</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2019b\toolbox\matlab\uitools\ginput.m',84,0)">line 84</a>)
+Interrupted by figure deletion
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Impact_stalk_2020feb24_a_WU_copy', 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m', 157)" style="font-weight:bold">Impact_stalk_2020feb24_a_WU_copy</a> (<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',157,0)">line 157</a>)
+            [impact_index_xx,impact_index_yy] = ginput(1);
+} 
+Impact_stalk_2020feb24_a_WU_copy
+         2020            5            4           19           39        39.85
+
+20200116_ndl18_hgt4_r1
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',183,1)">183 </a>        a = imcrop(a,[1280 (1600-level)/2 2560 (1600-level)]);
+if system_dependent('IsDebugMode')==1, dbstep; end
+imshow(a)
+if system_dependent('IsDebugMode')==1, dbquit; end
+Impact_stalk_2020feb24_a_WU_copy
+         2020            5            4           19           41       59.974
+
+20200116_ndl18_hgt4_r1
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',183,1)">183 </a>        a = imcrop(a,[0 0 2560 (1600-level)]);
+if system_dependent('IsDebugMode')==1, dbstep; end
+imshow(a)
+if system_dependent('IsDebugMode')==1, dbquit; end
+Impact_stalk_2020feb24_a_WU_copy
+         2020            5            4           19           43       32.245
+
+20200116_ndl18_hgt4_r1
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',183,1)">183 </a>        a = imcrop(a,[0 0 2560 level]);
+if system_dependent('IsDebugMode')==1, dbstep; end
+imshow(a)
+imshow(a)
+if system_dependent('IsDebugMode')==1, dbquit; end
+Impact_stalk_2020feb24_a_WU_copy
+         2020            5            4           19           57       46.347
+
+20200116_ndl18_hgt4_r1
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+{Matrix dimensions must agree.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Impact_stalk_2020feb24_a_WU_copy', 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m', 186)" style="font-weight:bold">Impact_stalk_2020feb24_a_WU_copy</a> (<a href="matlab: opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',186,0)">line 186</a>)
+        a0 =ref_a-a;
+} 
+opentoline('C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_2020feb24_a_WU_copy.m',186,0)
+Impact_stalk_2020feb24_a_WU_copy
+         2020            5            4           19           58       40.644
+
+20200116_ndl18_hgt4_r1
+Stretch figure 1 horizontally for a better resolution 
+Click on the middle pick in red line once: ?
+Click on the middle pick in green line once: ?
+Total 60 images have been processed, 42 have been circled, 18 have been centroided.
+20200116_ndl18_hgt4_r1_-0212.bmp might start impacting
+20200116_ndl18_hgt4_r1_-0258.bmp to 20200116_ndl18_hgt4_r1_-0271.bmp are jet growing
