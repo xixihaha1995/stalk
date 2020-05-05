@@ -36,7 +36,7 @@ right_saved=0;
 
 
 
-for movie_itr = 3:81
+for movie_itr = 6:81
     
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
@@ -499,25 +499,28 @@ for movie_itr = 3:81
     fprintf(fid,'%s\t',[impactingName]);
     if exist('jet_growing_index','var') == 1
         fprintf(fid,'%s\t',[img_dir(jet_growing_index).name]);
+    end 
+    fprintf(fid,'%s',[maxHeightYYName]);
+    if exist('radiiMax','var') == 1
+        fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d \t  %d \t %d \t %d\n',...
+            [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY;...
+            discreteIntegration;discreteIntegration/maxHeightYY;radiiMax*2]); %relative to flat surface
     else 
-        fprintf(fid,'%s',[maxHeightYYName]);
-        if exist('radiiMax','var') == 1
-            fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d \t  %d \t %d \t %d\n',...
-                [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY;...
-                discreteIntegration;discreteIntegration/maxHeightYY;radiiMax*2]); %relative to flat surface
-        else 
-            fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d \t  %d \t  %d\n',...
-                [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY;...
-                discreteIntegration;discreteIntegration/maxHeightYY]); %relative to flat surface
-        end
-        fclose(fid);
-        fprintf('maxHeight=%d\n',maxHeightYY);
-        disp('------same run imgs processed---------')
-        cd(directory);
+        fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d \t  %d \t  %d\n',...
+            [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY;...
+            discreteIntegration;discreteIntegration/maxHeightYY]); %relative to flat surface
     end
-
+    fclose(fid);
+    fprintf('maxHeight=%d\n',maxHeightYY);
+    disp('------same run imgs processed---------')
+    cd(directory);
     
 end
+    
+
+
+    
+
 
 disp('------same ndl imgs processed---------')
 diary 'C:\Users\lab-admin\Desktop\Lichen_Wu\matlab\stalk\Impact_stalk_diary'
