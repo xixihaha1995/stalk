@@ -36,7 +36,7 @@ right_saved=0;
 
 
 
-for movie_itr = 6:81
+for movie_itr = 7:81
     
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
@@ -102,6 +102,7 @@ for movie_itr = 6:81
     impact_saved = 0;
     getAssumingImpact=0;
     save_grow = 0;
+    debugLevel=false;
     growing = 0;
     maxHeightYY=1500;
     maxHeightYYName = 0;
@@ -348,7 +349,12 @@ for movie_itr = 6:81
             plot(profile_x+y1, profile_y+x1, 'y')
             hold off
             
-            keyboard
+            if save_grow==10 && debugLevel==false
+                keyboard
+                debugLevel=true;
+                %     dbcont to continue
+            end
+
             
 %             find the jetVel
 %             find the jetVel
@@ -492,10 +498,13 @@ for movie_itr = 6:81
     a0_max = double(max(max(a0)))/256.0;
     a1 = imadjust(a0, [0.01 a0_max], [0 1]); %for a better contrast
     BW = a0>max(max(a0))/5; %another way to convert into BW 
+    
+    
     imshow(BW)
+    hold on
     [centers,radiiMax] = imfindcircles(BW,[28 65],'ObjectPolarity','bright');
     
-    siz=size(radii);            
+    siz=size(radiiMax);            
     if(siz(1) ~= 1)
         stats = regionprops('table',BW,'Centroid',...
         'MajorAxisLength','MinorAxisLength','Orientation','BoundingBox');
@@ -506,15 +515,17 @@ for movie_itr = 6:81
         minorAxisLength =stats.MinorAxisLength(1);
         boundingBox = stats.BoundingBox(1,:);
         rectangle('Position', boundingBox, 'LineWidth', 2, 'EdgeColor', 'r')
+        hold off
         boundingBoxWidth = boundingBox(1,3);
     else
         majorAxisLength=radiiMax * 2 ;
         minorAxisLength=0;
         boundingBoxWidth=0;
         viscircles(centers,radiiMax);
+        hold off
     end
     keyboard
-%     dbcont to continue
+%      to continue
     
 %     circle the maxHeight img
 %     circle the maxHeight img
