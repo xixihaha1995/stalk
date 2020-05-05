@@ -45,7 +45,7 @@ for movie_itr = 275:275
     bmptable = dir('*.bmp');
 %         how to reverse iterate
     tableImgDir = struct2table(bmptable);
-    sortedT = sortrows(tableImgDir,3,'descend');
+    sortedT = sortrows(tableImgDir,1,'ascend');
     img_dir = table2struct(sortedT);
 %     reverse all files via created time
     [ref_index,ref_indexUseless] = size(img_dir);
@@ -180,8 +180,8 @@ for movie_itr = 275:275
             
         a = imread(filename);
        
-        a = imcrop(a,[0 0 2560 level]);
-        ref_a=imcrop(ref_a,[0 0 2560 level]);
+%         a = imcrop(a,[0 0 2560 level]);
+%         ref_a=imcrop(ref_a,[0 0 2560 level]);
         
 % subtract the background
         a0 =ref_a-a; 
