@@ -93,6 +93,7 @@ for movie_itr = 275:275
     close
     
     level = (x1 + x2)/2; 
+    level=level-12;
     numCircledFailuer = 0;
     totalNumber = 0;
     skipped = 0;
@@ -180,8 +181,8 @@ for movie_itr = 275:275
             
         a = imread(filename);
        
-        a = imcrop(a,[0 0 2560 level-10]);
-        ref_a=imcrop(ref_a,[0 0 2560 level-10]);
+        a = imcrop(a,[0 0 2560 level+3]);
+        ref_a=imcrop(ref_a,[0 0 2560 level+3]);
         
 % subtract the background
         a0 =ref_a-a; 
@@ -364,9 +365,12 @@ for movie_itr = 275:275
              
             impact_left_index=1;
             impact_right_index=1;
-            
+            [siz_inde,useless] = size(xxyy);
             while (xxyy(impact_left_index,1)<impact_index_xx-60)
                 impact_left_index = impact_left_index +1;
+                if impact_left_index ==useless
+                    break
+                end
             end
             [siz_inde,useless] = size(xxyy);
             while (xxyy(impact_right_index,1)<impact_index_xx+60) 
@@ -478,8 +482,8 @@ for movie_itr = 275:275
 %     circle the maxHeight img
 %     circle the maxHeight img
     a = imread(maxHeightYYName);
-    a = imcrop(a,[0 0 2560 level]);
-    ref_a=imcrop(ref_a,[0 0 2560 level]);
+    a = imcrop(a,[0 0 2560 level+3]);
+    ref_a=imcrop(ref_a,[0 0 2560 level+3]);
     a0 =ref_a-a; 
     a0_max = double(max(max(a0)))/256.0;
     a1 = imadjust(a0, [0.01 a0_max], [0 1]); %for a better contrast
@@ -492,8 +496,8 @@ for movie_itr = 275:275
         
     
     fid = fopen(maxHeightfile,'a');
-    fprintf(fid,'%s',[impactingName]);
-    fprintf(fid,'%s',[img_dir(jet_growing_index).name]);
+    fprintf(fid,'%s\t',[impactingName]);
+    fprintf(fid,'%s\t',[img_dir(jet_growing_index).name]);
     fprintf(fid,'%s',[maxHeightYYName]);
     fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d \t  %d \t %d \t %d\n',...
         [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY;...
