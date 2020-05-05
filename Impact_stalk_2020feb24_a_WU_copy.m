@@ -491,7 +491,29 @@ for movie_itr = 6:81
     BW = a0>max(max(a0))/5; %another way to convert into BW 
     imshow(BW)
     [centers,radiiMax] = imfindcircles(BW,[28 65],'ObjectPolarity','bright');
+    
+    siz=size(radii);            
+    if(siz(1) ~= 1)
+        stats = regionprops('table',BW,'Centroid',...
+        'MajorAxisLength','MinorAxisLength','Orientation','BoundingBox');
+        stats = sortrows(stats,2,'descend');
+        centers = stats.Centroid;
+        %         centers = centers(1,:);
+        majorAxisLength = stats.MajorAxisLength(1);
+        minorAxisLength =stats.MinorAxisLength(1);
+        boundingBox = stats.BoundingBox(1,:);
+        rectangle('Position', boundingBox)
+        boundingBoxWidth = boundingBox(1,3);
+    else
+        majorAxisLength=radiiMax * 2 ;
+        minorAxisLength=0;
+        boundingBoxWidth=0;
+        
+    end
+    keyboard
+%     dbcont to continue
     viscircles(centers,radiiMax);
+    
 %     circle the maxHeight img
 %     circle the maxHeight img
     
@@ -503,12 +525,13 @@ for movie_itr = 6:81
         fprintf(fid,'no Growing Detected');
     end 
     fprintf(fid,'%s',[maxHeightYYName]);
-    if exist('radiiMax','var') == 0
-        radiiMax = 0; 
-    end
-    fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d \t  %d \t %d \t  %d\n',...
+%     if exist('radiiMax','var') == 0
+%         radiiMax = 0; 
+%     end
+    fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d \t  %d \t %d \t %d \t %d \t  %d\n',...
         [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY;...
-        discreteIntegration;discreteIntegration/maxHeightYY;radiiMax]); %relative to flat surface
+        discreteIntegration;discreteIntegration/maxHeightYY;...
+        majorAxisLength;minorAxisLength;boundingBoxWidth]); %relative to flat surface
     
     fclose(fid);
     fprintf('maxHeight=%d\n',maxHeightYY);
