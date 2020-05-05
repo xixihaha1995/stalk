@@ -36,7 +36,7 @@ right_saved=0;
 
 
 
-for movie_itr = 275:275
+for movie_itr = 3:81
     
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
@@ -212,11 +212,11 @@ for movie_itr = 275:275
             totalNumber = totalNumber + 1;
             
                 boundary = B{K_I(1)};
-                figure(2);
-                imshow(a);
-                hold on;
-                plot(boundary(:,2), boundary(:,1),'r');
-                hold off;
+%                 figure(2);
+%                 imshow(a);
+%                 hold on;
+%                 plot(boundary(:,2), boundary(:,1),'r');
+%                 hold off;
 
 
 
@@ -481,6 +481,7 @@ for movie_itr = 275:275
     end
 %     circle the maxHeight img
 %     circle the maxHeight img
+    
     a = imread(maxHeightYYName);
     a = imcrop(a,[0 0 2560 level+3]);
     ref_a=imcrop(ref_a,[0 0 2560 level+3]);
@@ -493,19 +494,23 @@ for movie_itr = 275:275
     viscircles(centers,radiiMax);
 %     circle the maxHeight img
 %     circle the maxHeight img
-        
     
     fid = fopen(maxHeightfile,'a');
-    fprintf(fid,'%s\t',[impactingName]);
-    fprintf(fid,'%s\t',[img_dir(jet_growing_index).name]);
-    fprintf(fid,'%s',[maxHeightYYName]);
-    fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d \t  %d \t %d \t %d\n',...
-        [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY;...
-        discreteIntegration;discreteIntegration/maxHeightYY;radiiMax*2]); %relative to flat surface
-    fclose(fid);
-    fprintf('maxHeight=%d\n',maxHeightYY);
-    disp('------same run imgs processed---------')
-    cd(directory);
+    if exist('jet_growing_index','var') == 1 && exist('impactingName','var') == 1
+        fprintf(fid,'%s\t',[impactingName]);
+        fprintf(fid,'%s\t',[img_dir(jet_growing_index).name]);
+    else 
+        fprintf(fid,'%s',[maxHeightYYName]);
+        fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d \t  %d \t %d \t %d\n',...
+            [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY;...
+            discreteIntegration;discreteIntegration/maxHeightYY;radiiMax*2]); %relative to flat surface
+        fclose(fid);
+        fprintf('maxHeight=%d\n',maxHeightYY);
+        disp('------same run imgs processed---------')
+        cd(directory);
+    end
+
+    
 end
 
 disp('------same ndl imgs processed---------')
