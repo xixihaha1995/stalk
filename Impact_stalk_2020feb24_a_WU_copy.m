@@ -36,7 +36,7 @@ right_saved=0;
 
 
 
-for movie_itr = 7:81
+for movie_itr = 11:81
     
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
@@ -264,7 +264,7 @@ for movie_itr = 7:81
                     fid = fopen(filename_out_cir,'a');
                     
                     fprintf(fid,'%s',[img_dir(ii).name]);
-                    fprintf(fid, '\t  %d \t  %d \t  %d \t  %d \t  %d \t  %d \t  %8.2f \t %8.2f \t %s\t %8.2f \t %d\n',...
+                    fprintf(fid, '\t  %d \t  %d \t  %d \t  %d \t  %d \t  %d \t  %6.2f \t %6.2f \t %s\t %6.2f \t %d\n',...
                         [c(1);c(2);c(3);c(4);c(5);c(6); cenXX; cenYY; majorAxisLength;...
                         minorAxisLength; orientation]); 
                     fclose(fid);
@@ -283,7 +283,7 @@ for movie_itr = 7:81
                 fid = fopen(filename_out_cir,'a');
                 
                 fprintf(fid,'%s',[img_dir(ii).name]);
-                fprintf(fid, '\t %d \t  %d \t  %d \t  %d \t  %d \t  %d \t %8.2f \t %8.2f \t %8.2f\n',...
+                fprintf(fid, '\t %d \t  %d \t  %d \t  %d \t  %d \t  %d \t %6.2f \t %6.2f \t %6.2f\n',...
                     [c(1);c(2);c(3);c(4);c(5);c(6);cenXX; cenYY;radii]); %relative to flat surface
                 fclose(fid); 
                 continue
@@ -349,11 +349,11 @@ for movie_itr = 7:81
             plot(profile_x+y1, profile_y+x1, 'y')
             hold off
             
-            if save_grow==10 && debugLevel==false
-                keyboard
-                debugLevel=true;
-                %     dbcont to continue
-            end
+%             if save_grow==10 && debugLevel==false
+%                 keyboard
+%                 debugLevel=true;
+%                 %     dbcont to continue
+%             end
 
             
 %             find the jetVel
@@ -461,7 +461,7 @@ for movie_itr = 7:81
                 
                 fid = fopen(filename_out_prof,'a');
                 fprintf(fid,'%s',[img_dir(ii).name]);
-                fprintf(fid, '\t %d \t  %d \t  %d \t  %d \t  %d \t  %d \t  %d \t %d \t %8.2f\n',...
+                fprintf(fid, '\t %d \t  %d \t  %d \t  %d \t  %d \t  %d \t  %d \t %d \t %6.2f\n',...
                     [c(1);c(2);c(3);c(4);c(5);c(6);heightXX;heightYY;increaseHight]); %relative to flat surface
                 fclose(fid);
                 save_grow = save_grow + 1;
@@ -481,7 +481,7 @@ for movie_itr = 7:81
             filename_out = strcat(filename,ext_out);
             fid = fopen(filename_out,'w');
             %relative to flat surface
-            fprintf(fid, '%8.2f \t %8.2f\n',[profile_x; -profile_y]); 
+            fprintf(fid, '%6.2f \t %6.2f\n',[profile_x; -profile_y]); 
             fclose(fid);
             clear profile_x profile_y  
             
@@ -541,7 +541,7 @@ for movie_itr = 7:81
 %     if exist('radiiMax','var') == 0
 %         radiiMax = 0; 
 %     end
-    fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d \t  %d \t %d \t %d \t %d \t  %d\n',...
+    fprintf(fid, '\t %d \t  %d \t %d \t  %d \t %d \t %6.2f \t %6.2f \t %6.2f \t %6.2f \t %6.2f \t  %6.2f  \t %6.2f  \t  %6.2f \n',...
         [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY;...
         discreteIntegration;discreteIntegration/maxHeightYY;...
         majorAxisLength;minorAxisLength;boundingBoxWidth]); %relative to flat surface
