@@ -180,8 +180,8 @@ for movie_itr = 275:275
             
         a = imread(filename);
        
-        a = imcrop(a,[0 0 2560 level]);
-        ref_a=imcrop(ref_a,[0 0 2560 level]);
+        a = imcrop(a,[0 0 2560 level-10]);
+        ref_a=imcrop(ref_a,[0 0 2560 level-10]);
         
 % subtract the background
         a0 =ref_a-a; 
@@ -417,7 +417,6 @@ for movie_itr = 275:275
             if heightYY< maxHeightYY
                 maxHeightYY = heightYY;
                 maxHeightYYName = img_dir(ii).name;
-%                 imwrite(BW,'testMaxImage.bmp');
             end
                 
 % saved max height
@@ -498,7 +497,7 @@ for movie_itr = 275:275
     fprintf(fid,'%s',[maxHeightYYName]);
     fprintf(fid, '\t %d \t %d \t %d \t %d \t %d \t %d \t  %d \t %d \t  %d \t %d \t %d\n',...
         [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY;...
-        discreteIntegration;discreteIntegration/maxHeightYY;radiiMax]); %relative to flat surface
+        discreteIntegration;discreteIntegration/maxHeightYY;radiiMax*2]); %relative to flat surface
     fclose(fid);
     fprintf('maxHeight=%d\n',maxHeightYY);
     disp('------same run imgs processed---------')
