@@ -492,8 +492,8 @@ for movie_itr = 27:81
 %     circle the maxHeight img
     pattern = ["ht7"];
     if contains(maxHeightYYName,pattern)
-        cropWidth = 60;
-        cropHeight = 80;
+        cropWidth = 100;
+        cropHeight = 150;
     else
         cropWidth = 190;
         cropHeight = 180;
@@ -501,8 +501,8 @@ for movie_itr = 27:81
     
 
     a = imread(maxHeightYYName);
-    a = imcrop(a,[impact_index_xx-90 maxHeightYY-10  cropWidth cropHeight]);
-    ref_a=imcrop(ref_a,[impact_index_xx-90 maxHeightYY  cropWidth cropHeight]);
+    a = imcrop(a,[impact_index_xx-cropWidth/2 maxHeightYY-10  cropWidth cropHeight]);
+    ref_a=imcrop(ref_a,[impact_index_xx-cropWidth/2 maxHeightYY-10  cropWidth cropHeight]);
     a0 =ref_a-a; 
     a0_max = double(max(max(a0)))/256.0;
     a1 = imadjust(a0, [0.01 a0_max], [0 1]); %for a better contrast
