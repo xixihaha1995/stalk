@@ -36,7 +36,7 @@ right_saved=0;
 
 
 
-for movie_itr = 27:81
+for movie_itr = 34:81
     
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
@@ -492,11 +492,15 @@ for movie_itr = 27:81
 %     circle the maxHeight img
     pattern = ["ht7"];
     if contains(maxHeightYYName,pattern)
-        cropWidth = 100;
-        cropHeight = 150;
+        cropWidth = 70;
+        cropHeight = 60;
+        minRa = 9;
+        maxRa = 40;
     else
         cropWidth = 190;
         cropHeight = 180;
+        minRa = 28;
+        maxRa = 80;
     end
     
 
@@ -511,7 +515,7 @@ for movie_itr = 27:81
     
     imshow(BW)
     hold on
-    [centers,radiiMax] = imfindcircles(BW,[28 80],'ObjectPolarity','bright');
+    [centers,radiiMax] = imfindcircles(BW,[minRa maxRa],'ObjectPolarity','bright');
     
     siz=size(radiiMax);            
     if(siz(1) ~= 1)
