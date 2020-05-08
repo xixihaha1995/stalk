@@ -36,7 +36,7 @@ right_saved=0;
 
 
 
-for movie_itr = 11:81
+for movie_itr = 22:81
     
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
@@ -502,7 +502,7 @@ for movie_itr = 11:81
     
     imshow(BW)
     hold on
-    [centers,radiiMax] = imfindcircles(BW,[28 65],'ObjectPolarity','bright');
+    [centers,radiiMax] = imfindcircles(BW,[28 75],'ObjectPolarity','bright');
     
     siz=size(radiiMax);            
     if(siz(1) ~= 1)
@@ -542,9 +542,8 @@ for movie_itr = 11:81
 %         radiiMax = 0; 
 %     end
     fprintf(fid, '\t %d \t  %d \t %d \t  %d \t %d \t %6.2f \t %6.2f \t %6.2f \t %6.2f \t %6.2f \t  %6.2f  \t %6.2f  \t  %6.2f \n',...
-        [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY;...
-        discreteIntegration;discreteIntegration/maxHeightYY;...
-        majorAxisLength;minorAxisLength;boundingBoxWidth]); %relative to flat surface
+        [c(1);c(2);c(3);c(4);c(5);maxHeightYY;level;level-maxHeightYY;discreteIntegration;...
+        discreteIntegration/maxHeightYY;majorAxisLength;minorAxisLength;boundingBoxWidth]); %relative to flat surface
     
     fclose(fid);
     fprintf('maxHeight=%d\n',maxHeightYY);
