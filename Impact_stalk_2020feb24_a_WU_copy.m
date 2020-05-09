@@ -36,7 +36,7 @@ right_saved=0;
 
 
 
-for movie_itr = 79:81
+for movie_itr = 120:154
     
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
@@ -45,8 +45,14 @@ for movie_itr = 79:81
     bmptable = dir('*.bmp');
 %         how to reverse iterate
     tableImgDir = struct2table(bmptable);
-%     sortedT = sortrows(tableImgDir,3,'descend');
     img_dir = table2struct(tableImgDir);
+    [ref_index,ref_indexUseless] = size(img_dir);
+    if contains(img_dir(ref_index).name,'-')==0 
+        sortedT = sortrows(tableImgDir,1,'descend');
+        img_dir = table2struct(sortedT);
+    else
+        img_dir = table2struct(sortedT);
+    end
 %     reverse all files via created time
     [ref_index,ref_indexUseless] = size(img_dir);
     
@@ -495,15 +501,15 @@ for movie_itr = 79:81
     end
 %     circle the maxHeight img
 %     circle the maxHeight img
-    pattern = ["ht7","ht6"];
+    pattern = ["ht7"];
     if contains(maxHeightYYName,pattern)
         cropWidth = 70;
-        cropHeight = 60;
+        cropHeight = 80;
         minRa = 9;
         maxRa = 40;
     else
-        cropWidth = 190;
-        cropHeight = 180;
+        cropWidth = 200;
+        cropHeight = 200;
         minRa = 28;
         maxRa = 80;
     end
@@ -542,8 +548,8 @@ for movie_itr = 79:81
         viscircles(centers,radiiMax);
         hold off
     end
-    keyboard
-%      to continue
+%     keyboard
+% %      to continue
     
 %     circle the maxHeight img
 %     circle the maxHeight img
