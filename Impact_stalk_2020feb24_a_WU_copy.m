@@ -36,7 +36,7 @@ right_saved=0;
 
 
 
-for movie_itr = 120:154
+for movie_itr = 131:154
     
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
@@ -45,7 +45,9 @@ for movie_itr = 120:154
     bmptable = dir('*.bmp');
 %         how to reverse iterate
     tableImgDir = struct2table(bmptable);
+%     keyboard
     img_dir = table2struct(tableImgDir);
+%     keyboard
     [ref_index,ref_indexUseless] = size(img_dir);
     if contains(img_dir(ref_index).name,'-')==0 
         sortedT = sortrows(tableImgDir,1,'descend');
