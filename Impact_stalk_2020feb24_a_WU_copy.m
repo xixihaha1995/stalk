@@ -50,9 +50,10 @@ for movie_itr = 120:154
     if contains(img_dir(ref_index).name,'-')==0 
         sortedT = sortrows(tableImgDir,1,'descend');
         img_dir = table2struct(sortedT);
-    else
-        img_dir = table2struct(sortedT);
     end
+%     if contains(img_dir(ref_index).name,'-')~=0 
+%         img_dir = table2struct(sortedT);
+%     end
 %     reverse all files via created time
     [ref_index,ref_indexUseless] = size(img_dir);
     
