@@ -36,7 +36,7 @@ right_saved=0;
 
 
 
-for movie_itr = 78:81
+for movie_itr = 79:81
     
     movie_folder_name = movie_dir(movie_itr).name;
     cd(strcat(movie_folder_name,'\'));
@@ -45,16 +45,18 @@ for movie_itr = 78:81
     bmptable = dir('*.bmp');
 %         how to reverse iterate
     tableImgDir = struct2table(bmptable);
-    sortedT = sortrows(tableImgDir,3,'descend');
-    img_dir = table2struct(sortedT);
+%     sortedT = sortrows(tableImgDir,3,'descend');
+    img_dir = table2struct(tableImgDir);
 %     reverse all files via created time
     [ref_index,ref_indexUseless] = size(img_dir);
     
-    sortedT = sortrows(tableImgDir,1,'descend');
-    img_dir = table2struct(sortedT);
+
  
 %     if contains(img_dir(ref_index).name,'-')==0
 %         sortedT = sortrows(tableImgDir,1,'ascend');
+%         img_dir = table2struct(sortedT);
+%     else
+%         sortedT = sortrows(tableImgDir,1,'descend');
 %         img_dir = table2struct(sortedT);
 %     end
 %     reverse all files via filename        
